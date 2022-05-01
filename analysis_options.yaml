@@ -1,0 +1,17 @@
+ include: package:lint/analysis_options.yaml
+
+ analyzer:
+   exclude:
+     - lib/src/common/presentation/localization/generated/intl/*.dart
+     - lib/src/common/presentation/localization/generated/*.dart
+     - '**/*.g.dart'
+     - '**/*.freezed.dart'
+     - '**/*.config.dart'
+   errors:
+     missing_required_param: error
+
+ linter:
+   rules:
+     sort_constructors_first: true
+     depend_on_referenced_packages: false
+     public_member_api_docs: true
