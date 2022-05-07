@@ -13,6 +13,7 @@ dependencies:
   equatable: ^2.0.3
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.0.1
   flutter_localizations:
     sdk: flutter
   freezed: ^2.0.2
@@ -86,9 +87,9 @@ index_generator:
   exclude:
     - '**.g.dart'
     - '**.freezed.dart'
-    - '**/bloc/**_event.dart'
-    - '**/bloc/**_state.dart'
-    - '**/cubit/**_state.dart'
+    - '**/blocs/**_event.dart'
+    - '**/blocs/**_state.dart'
+    - '**/cubits/**_state.dart'
   indexes:
     - path: lib/src/base
       include:
