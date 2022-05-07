@@ -32,7 +32,7 @@ class PostsCubit extends Cubit<PostsState> {
       const PostsState.inProgress(),
     );
 
-    final result = _getAllPosts();
+    final result = await _getAllPosts();
 
     emit(
       result.when(
@@ -48,7 +48,7 @@ class PostsCubit extends Cubit<PostsState> {
       const PostsState.inProgress(),
     );
 
-    final result = _getUserPosts(
+    final result = await _getUserPosts(
       GetUserPostsParams(userId: userId),
     );
 

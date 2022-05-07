@@ -6,7 +6,7 @@ import 'package:next_blog/src/features/posts/domain/repositories/post_repository
 
 /// A use case for getting all available user posts.
 @LazySingleton()
-class GetAllPosts extends UseCaseWithoutParams<List<Post>> {
+class GetAllPosts extends AsyncUseCaseWithoutParams<List<Post>> {
   /// Creates the use case.
   GetAllPosts({
     required PostRepository repository,
@@ -15,7 +15,7 @@ class GetAllPosts extends UseCaseWithoutParams<List<Post>> {
   final PostRepository _repository;
 
   @override
-  Result<List<Post>> call() {
+  Future<Result<List<Post>>> call() {
     return _repository.getAllPosts();
   }
 }

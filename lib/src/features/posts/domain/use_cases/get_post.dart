@@ -6,7 +6,7 @@ import 'package:next_blog/src/features/posts/domain/repositories/post_repository
 
 /// A use case for getting a single user post.
 @LazySingleton()
-class GetPost extends UseCaseWithParams<Post, GetPostParams> {
+class GetPost extends AsyncUseCaseWithParams<Post, GetPostParams> {
   /// Creates the use case.
   GetPost({
     required PostRepository repository,
@@ -15,7 +15,7 @@ class GetPost extends UseCaseWithParams<Post, GetPostParams> {
   final PostRepository _repository;
 
   @override
-  Result<Post> call(GetPostParams params) {
+  Future<Result<Post>> call(GetPostParams params) {
     return _repository.getPost(params.postId);
   }
 }

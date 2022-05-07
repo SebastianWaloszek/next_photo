@@ -7,7 +7,8 @@ import 'package:next_blog/src/features/users/domain/entities/user.dart';
 
 /// A use case for getting all posts of a user.
 @LazySingleton()
-class GetUserPosts extends UseCaseWithParams<List<Post>, GetUserPostsParams> {
+class GetUserPosts
+    extends AsyncUseCaseWithParams<List<Post>, GetUserPostsParams> {
   /// Creates the use case.
   GetUserPosts({
     required PostRepository repository,
@@ -16,7 +17,7 @@ class GetUserPosts extends UseCaseWithParams<List<Post>, GetUserPostsParams> {
   final PostRepository _repository;
 
   @override
-  Result<List<Post>> call(GetUserPostsParams params) {
+  Future<Result<List<Post>>> call(GetUserPostsParams params) {
     return _repository.getUserPosts(params.userId);
   }
 }

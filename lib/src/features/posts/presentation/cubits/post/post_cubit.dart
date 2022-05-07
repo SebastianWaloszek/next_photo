@@ -25,7 +25,7 @@ class PostCubit extends Cubit<PostState> {
       const PostState.inProgress(),
     );
 
-    final result = _getPost(
+    final result = await _getPost(
       GetPostParams(postId: postId),
     );
 

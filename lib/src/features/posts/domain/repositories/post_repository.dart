@@ -4,12 +4,12 @@ import 'package:next_blog/src/features/users/domain/entities/user.dart';
 
 /// The repository interface for handling user posts.
 abstract class PostRepository {
-  /// Returns result with a single post.
-  Result<Post> getPost(PostId id);
-
   /// Returns result with all available posts.
-  Result<List<Post>> getAllPosts();
+  Future<Result<List<Post>>> getAllPosts();
 
-  /// Returns result with all posts of a given user.
-  Result<List<Post>> getUserPosts(UserId userId);
+  /// Returns result with a single post.
+  Future<Result<Post>> getPost(PostId id);
+
+  /// Returns result with all posts from a given user.
+  Future<Result<List<Post>>> getUserPosts(UserId userId);
 }

@@ -7,6 +7,6 @@ abstract class AlbumRepository {
   /// Returns result with all available photo albums.
   Future<Result<List<Album>>> getAllAlbums();
 
-  /// Returns result with all photo albums of a given user.
+  /// Returns result with all photo albums from a given user.
   Future<Result<List<Album>>> getUserAlbums(UserId userId);
 }

@@ -5,7 +5,7 @@ import 'package:next_blog/src/features/users/data/models/user_model.dart';
 import 'package:next_blog/src/features/users/domain/entities/user.dart';
 
 /// Mapper for creating an [User] entity from model.
-class UserMapper implements Mapper<UserModel, User> {
+class UserFromModel implements Mapper<UserModel, User> {
   @override
   User call(UserModel userModel) {
     return User(
