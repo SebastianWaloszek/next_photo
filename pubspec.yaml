@@ -32,6 +32,7 @@ dev_dependencies:
     sdk: flutter
   intl_generator: ^0.2.1
   intl_utils: ^2.6.1
+  json_serializable: ^6.2.0
   lint: ^1.8.2
   mocktail: 0.3.0
 

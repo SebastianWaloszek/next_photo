@@ -14,6 +14,10 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+PhotoModel _$PhotoModelFromJson(Map<String, dynamic> json) {
+  return _PhotoModel.fromJson(json);
+}
+
 /// @nodoc
 mixin _$PhotoModel {
   int get id => throw _privateConstructorUsedError;
@@ -22,6 +26,7 @@ mixin _$PhotoModel {
   String get url => throw _privateConstructorUsedError;
   String get thumbnailUrl => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $PhotoModelCopyWith<PhotoModel> get copyWith =>
       throw _privateConstructorUsedError;
@@ -131,7 +136,7 @@ class __$PhotoModelCopyWithImpl<$Res> extends _$PhotoModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_PhotoModel implements _PhotoModel {
   const _$_PhotoModel(
       {required this.id,
@@ -139,6 +144,9 @@ class _$_PhotoModel implements _PhotoModel {
       this.title,
       required this.url,
       required this.thumbnailUrl});
+
+  factory _$_PhotoModel.fromJson(Map<String, dynamic> json) =>
+      _$$_PhotoModelFromJson(json);
 
   @override
   final int id;
@@ -169,6 +177,7 @@ class _$_PhotoModel implements _PhotoModel {
                 .equals(other.thumbnailUrl, thumbnailUrl));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -182,6 +191,11 @@ class _$_PhotoModel implements _PhotoModel {
   @override
   _$PhotoModelCopyWith<_PhotoModel> get copyWith =>
       __$PhotoModelCopyWithImpl<_PhotoModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_PhotoModelToJson(this);
+  }
 }
 
 abstract class _PhotoModel implements PhotoModel {
@@ -191,6 +205,9 @@ abstract class _PhotoModel implements PhotoModel {
       final String? title,
       required final String url,
       required final String thumbnailUrl}) = _$_PhotoModel;
+
+  factory _PhotoModel.fromJson(Map<String, dynamic> json) =
+      _$_PhotoModel.fromJson;
 
   @override
   int get id => throw _privateConstructorUsedError;

@@ -14,12 +14,17 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+AlbumModel _$AlbumModelFromJson(Map<String, dynamic> json) {
+  return _AlbumModel.fromJson(json);
+}
+
 /// @nodoc
 mixin _$AlbumModel {
   int get id => throw _privateConstructorUsedError;
   int get userId => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $AlbumModelCopyWith<AlbumModel> get copyWith =>
       throw _privateConstructorUsedError;
@@ -107,9 +112,12 @@ class __$AlbumModelCopyWithImpl<$Res> extends _$AlbumModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_AlbumModel implements _AlbumModel {
   const _$_AlbumModel({required this.id, required this.userId, this.title});
+
+  factory _$_AlbumModel.fromJson(Map<String, dynamic> json) =>
+      _$$_AlbumModelFromJson(json);
 
   @override
   final int id;
@@ -133,6 +141,7 @@ class _$_AlbumModel implements _AlbumModel {
             const DeepCollectionEquality().equals(other.title, title));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -144,6 +153,11 @@ class _$_AlbumModel implements _AlbumModel {
   @override
   _$AlbumModelCopyWith<_AlbumModel> get copyWith =>
       __$AlbumModelCopyWithImpl<_AlbumModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_AlbumModelToJson(this);
+  }
 }
 
 abstract class _AlbumModel implements AlbumModel {
@@ -151,6 +165,9 @@ abstract class _AlbumModel implements AlbumModel {
       {required final int id,
       required final int userId,
       final String? title}) = _$_AlbumModel;
+
+  factory _AlbumModel.fromJson(Map<String, dynamic> json) =
+      _$_AlbumModel.fromJson;
 
   @override
   int get id => throw _privateConstructorUsedError;

@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'post_model.freezed.dart';
+part 'post_model.g.dart';
 
 /// The model for a post.
 @freezed
