@@ -1,6 +1,6 @@
 part of 'post_cubit.dart';
 
-/// The cubit state of a single post.
+/// The cubit state for a single post.
 @freezed
 class PostState with _$PostState {
   /// Creates initial cubit state for a post.

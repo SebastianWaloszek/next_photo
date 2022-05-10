@@ -4,6 +4,8 @@ import 'package:next_blog/src/di/injector.dart';
 
 /// Sets up application dependencies and runs the app.
 Future<void> runApplication() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   setupDependencies();
 
   runApp(App());

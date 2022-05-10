@@ -1,6 +1,6 @@
 part of 'user_cubit.dart';
 
-/// The cubit state of a single user.
+/// The cubit state for a single user.
 @freezed
 class UserState with _$UserState {
   /// Creates initial cubit state for a user.

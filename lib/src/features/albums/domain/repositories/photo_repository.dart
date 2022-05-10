@@ -6,4 +6,10 @@ import 'package:next_blog/src/features/albums/domain/entities/photo.dart';
 abstract class PhotoRepository {
   /// Returns result with all available photos in an album.
   Future<Result<List<Photo>>> getAlbumPhotos(AlbumId albumId);
+
+  /// Updates whether a given photo is liked or unliked.
+  Future<Result<void>> updatePhotoLike(
+    PhotoId id, {
+    required bool like,
+  });
 }

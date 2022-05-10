@@ -1,6 +1,6 @@
 part of 'posts_cubit.dart';
 
-/// The cubit state of a list of posts.
+/// The cubit state for a list of posts.
 @freezed
 class PostsState with _$PostsState {
   /// Creates initial cubit state for posts.

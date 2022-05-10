@@ -1,6 +1,6 @@
 part of 'photos_cubit.dart';
 
-/// The cubit state of a list of photos.
+/// The cubit state for a list of photos.
 @freezed
 class PhotosState with _$PhotosState {
   /// Creates initial cubit state for photos.

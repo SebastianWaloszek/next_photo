@@ -1,6 +1,6 @@
 part of 'albums_cubit.dart';
 
-/// The cubit state of a list of albums.
+/// The cubit state for a list of albums.
 @freezed
 class AlbumsState with _$AlbumsState {
   /// Creates initial cubit state for albums.

@@ -1,7 +1,9 @@
+import 'package:injectable/injectable.dart';
 import 'package:next_blog/src/features/posts/data/models/post_model.dart';
 import 'package:next_blog/src/features/posts/data/sources/post_data_source.dart';
 
 /// REST implementation of the post data source.
+@LazySingleton(as: PostDataSource)
 class PostRestDataSource implements PostDataSource {
   @override
   Future<List<PostModel>> getAllPosts() {
