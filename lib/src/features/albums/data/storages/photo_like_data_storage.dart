@@ -1,7 +1,7 @@
 /// Interface for storing photo likes.
 abstract class PhotoLikeDataStorage {
   /// Updates stored like value for a given photo id.
-  Future<void> updatePhotoLike({
+  Future<void> setPhotoLike({
     required String photoId,
     required bool like,
   });

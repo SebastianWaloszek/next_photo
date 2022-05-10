@@ -20,7 +20,7 @@ class PhotoLikeDataStorageImpl implements PhotoLikeDataStorage {
   }
 
   @override
-  Future<void> updatePhotoLike({
+  Future<void> setPhotoLike({
     required String photoId,
     required bool like,
   }) async {

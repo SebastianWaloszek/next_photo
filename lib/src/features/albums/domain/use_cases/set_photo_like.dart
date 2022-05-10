@@ -6,28 +6,27 @@ import 'package:next_blog/src/features/albums/domain/repositories/photo_reposito
 
 /// A use case for liking or unliking a photo.
 @LazySingleton()
-class UpdatePhotoLike
-    extends AsyncUseCaseWithParams<void, UpdatePhotoLikeParams> {
+class SetPhotoLike extends AsyncUseCaseWithParams<void, SetPhotoLikeParams> {
   /// Creates the use case.
-  UpdatePhotoLike({
+  SetPhotoLike({
     required PhotoRepository repository,
   }) : _repository = repository;
 
   final PhotoRepository _repository;
 
   @override
-  Future<Result<void>> call(UpdatePhotoLikeParams params) {
-    return _repository.updatePhotoLike(
+  Future<Result<void>> call(SetPhotoLikeParams params) {
+    return _repository.setPhotoLike(
       params.photoId,
       like: params.like,
     );
   }
 }
 
-/// Parameters for [UpdatePhotoLike] use case.
-class UpdatePhotoLikeParams extends Params {
+/// Parameters for [SetPhotoLike] use case.
+class SetPhotoLikeParams extends Params {
   /// Creates params.
-  UpdatePhotoLikeParams({
+  SetPhotoLikeParams({
     required this.photoId,
     required this.like,
   });

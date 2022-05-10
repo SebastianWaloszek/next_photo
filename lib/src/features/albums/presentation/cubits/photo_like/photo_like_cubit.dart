@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:next_blog/src/base/domain/entities/result.dart';
 import 'package:next_blog/src/features/albums/domain/entities/photo.dart';
-import 'package:next_blog/src/features/albums/domain/use_cases/update_photo_like.dart';
+import 'package:next_blog/src/features/albums/domain/use_cases/set_photo_like.dart';
 
 part 'photo_like_cubit.freezed.dart';
 part 'photo_like_state.dart';
@@ -11,13 +11,13 @@ part 'photo_like_state.dart';
 class PhotoLikeCubit extends Cubit<PhotoLikeState> {
   /// Creates the cubit.
   PhotoLikeCubit({
-    required UpdatePhotoLike updatePhotoLike,
-  })  : _updatePhotoLike = updatePhotoLike,
+    required SetPhotoLike setPhotoLike,
+  })  : _setPhotoLike = setPhotoLike,
         super(
           const PhotoLikeState.initial(),
         );
 
-  final UpdatePhotoLike _updatePhotoLike;
+  final SetPhotoLike _setPhotoLike;
 
   /// Updates the given photo's like status.
   Future<void> updatePhotoLike(
@@ -28,8 +28,8 @@ class PhotoLikeCubit extends Cubit<PhotoLikeState> {
       PhotoLikeState.inProgress(like: like),
     );
 
-    final result = await _updatePhotoLike(
-      UpdatePhotoLikeParams(
+    final result = await _setPhotoLike(
+      SetPhotoLikeParams(
         photoId: photo.id,
         like: like,
       ),

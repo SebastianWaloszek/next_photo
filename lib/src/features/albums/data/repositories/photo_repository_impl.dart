@@ -43,12 +43,26 @@ class PhotoRepositoryImpl implements PhotoRepository {
   }
 
   @override
-  Future<Result<void>> updatePhotoLike(
+  Future<Result<List<Photo>>> getAllPhotos() async {
+    try {
+      final photosModels = await _dataSource.getAllPhotos();
+      final photos = await _mapPhotosFromModels(photosModels);
+
+      return Result(photos);
+    } catch (e, s) {
+      _logger.e('Getting all available photos has failed!', e, s);
+
+      return Result.failure(Failure(e, s));
+    }
+  }
+
+  @override
+  Future<Result<void>> setPhotoLike(
     PhotoId id, {
     required bool like,
   }) async {
     try {
-      final success = await _likeDataStorage.updatePhotoLike(
+      final success = await _likeDataStorage.setPhotoLike(
         photoId: '${id.value}',
         like: like,
       );
