@@ -72,29 +72,29 @@ class _$ResultCopyWithImpl<T, $Res> implements $ResultCopyWith<T, $Res> {
 }
 
 /// @nodoc
-abstract class _$ResultSuccessCopyWith<T, $Res> {
-  factory _$ResultSuccessCopyWith(
-          _ResultSuccess<T> value, $Res Function(_ResultSuccess<T>) then) =
-      __$ResultSuccessCopyWithImpl<T, $Res>;
+abstract class _$$_ResultSuccessCopyWith<T, $Res> {
+  factory _$$_ResultSuccessCopyWith(
+          _$_ResultSuccess<T> value, $Res Function(_$_ResultSuccess<T>) then) =
+      __$$_ResultSuccessCopyWithImpl<T, $Res>;
   $Res call({T result});
 }
 
 /// @nodoc
-class __$ResultSuccessCopyWithImpl<T, $Res>
+class __$$_ResultSuccessCopyWithImpl<T, $Res>
     extends _$ResultCopyWithImpl<T, $Res>
-    implements _$ResultSuccessCopyWith<T, $Res> {
-  __$ResultSuccessCopyWithImpl(
-      _ResultSuccess<T> _value, $Res Function(_ResultSuccess<T>) _then)
-      : super(_value, (v) => _then(v as _ResultSuccess<T>));
+    implements _$$_ResultSuccessCopyWith<T, $Res> {
+  __$$_ResultSuccessCopyWithImpl(
+      _$_ResultSuccess<T> _value, $Res Function(_$_ResultSuccess<T>) _then)
+      : super(_value, (v) => _then(v as _$_ResultSuccess<T>));
 
   @override
-  _ResultSuccess<T> get _value => super._value as _ResultSuccess<T>;
+  _$_ResultSuccess<T> get _value => super._value as _$_ResultSuccess<T>;
 
   @override
   $Res call({
     Object? result = freezed,
   }) {
-    return _then(_ResultSuccess<T>(
+    return _then(_$_ResultSuccess<T>(
       result == freezed
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
@@ -120,7 +120,7 @@ class _$_ResultSuccess<T> implements _ResultSuccess<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ResultSuccess<T> &&
+            other is _$_ResultSuccess<T> &&
             const DeepCollectionEquality().equals(other.result, result));
   }
 
@@ -130,8 +130,8 @@ class _$_ResultSuccess<T> implements _ResultSuccess<T> {
 
   @JsonKey(ignore: true)
   @override
-  _$ResultSuccessCopyWith<T, _ResultSuccess<T>> get copyWith =>
-      __$ResultSuccessCopyWithImpl<T, _ResultSuccess<T>>(this, _$identity);
+  _$$_ResultSuccessCopyWith<T, _$_ResultSuccess<T>> get copyWith =>
+      __$$_ResultSuccessCopyWithImpl<T, _$_ResultSuccess<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -201,36 +201,36 @@ abstract class _ResultSuccess<T> implements Result<T> {
 
   T get result => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$ResultSuccessCopyWith<T, _ResultSuccess<T>> get copyWith =>
+  _$$_ResultSuccessCopyWith<T, _$_ResultSuccess<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ResultFailureCopyWith<T, $Res> {
-  factory _$ResultFailureCopyWith(
-          _ResultFailure<T> value, $Res Function(_ResultFailure<T>) then) =
-      __$ResultFailureCopyWithImpl<T, $Res>;
+abstract class _$$_ResultFailureCopyWith<T, $Res> {
+  factory _$$_ResultFailureCopyWith(
+          _$_ResultFailure<T> value, $Res Function(_$_ResultFailure<T>) then) =
+      __$$_ResultFailureCopyWithImpl<T, $Res>;
   $Res call({Failure error});
 
   $FailureCopyWith<$Res> get error;
 }
 
 /// @nodoc
-class __$ResultFailureCopyWithImpl<T, $Res>
+class __$$_ResultFailureCopyWithImpl<T, $Res>
     extends _$ResultCopyWithImpl<T, $Res>
-    implements _$ResultFailureCopyWith<T, $Res> {
-  __$ResultFailureCopyWithImpl(
-      _ResultFailure<T> _value, $Res Function(_ResultFailure<T>) _then)
-      : super(_value, (v) => _then(v as _ResultFailure<T>));
+    implements _$$_ResultFailureCopyWith<T, $Res> {
+  __$$_ResultFailureCopyWithImpl(
+      _$_ResultFailure<T> _value, $Res Function(_$_ResultFailure<T>) _then)
+      : super(_value, (v) => _then(v as _$_ResultFailure<T>));
 
   @override
-  _ResultFailure<T> get _value => super._value as _ResultFailure<T>;
+  _$_ResultFailure<T> get _value => super._value as _$_ResultFailure<T>;
 
   @override
   $Res call({
     Object? error = freezed,
   }) {
-    return _then(_ResultFailure<T>(
+    return _then(_$_ResultFailure<T>(
       error == freezed
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -263,7 +263,7 @@ class _$_ResultFailure<T> implements _ResultFailure<T> {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ResultFailure<T> &&
+            other is _$_ResultFailure<T> &&
             const DeepCollectionEquality().equals(other.error, error));
   }
 
@@ -273,8 +273,8 @@ class _$_ResultFailure<T> implements _ResultFailure<T> {
 
   @JsonKey(ignore: true)
   @override
-  _$ResultFailureCopyWith<T, _ResultFailure<T>> get copyWith =>
-      __$ResultFailureCopyWithImpl<T, _ResultFailure<T>>(this, _$identity);
+  _$$_ResultFailureCopyWith<T, _$_ResultFailure<T>> get copyWith =>
+      __$$_ResultFailureCopyWithImpl<T, _$_ResultFailure<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -344,7 +344,7 @@ abstract class _ResultFailure<T> implements Result<T> {
 
   Failure get error => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$ResultFailureCopyWith<T, _ResultFailure<T>> get copyWith =>
+  _$$_ResultFailureCopyWith<T, _$_ResultFailure<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -391,30 +391,31 @@ class _$FailureCopyWithImpl<$Res> implements $FailureCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ErrorFailureCopyWith<$Res> implements $FailureCopyWith<$Res> {
-  factory _$ErrorFailureCopyWith(
-          _ErrorFailure value, $Res Function(_ErrorFailure) then) =
-      __$ErrorFailureCopyWithImpl<$Res>;
+abstract class _$$_ErrorFailureCopyWith<$Res>
+    implements $FailureCopyWith<$Res> {
+  factory _$$_ErrorFailureCopyWith(
+          _$_ErrorFailure value, $Res Function(_$_ErrorFailure) then) =
+      __$$_ErrorFailureCopyWithImpl<$Res>;
   @override
   $Res call({dynamic value, StackTrace? stackTrace});
 }
 
 /// @nodoc
-class __$ErrorFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
-    implements _$ErrorFailureCopyWith<$Res> {
-  __$ErrorFailureCopyWithImpl(
-      _ErrorFailure _value, $Res Function(_ErrorFailure) _then)
-      : super(_value, (v) => _then(v as _ErrorFailure));
+class __$$_ErrorFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
+    implements _$$_ErrorFailureCopyWith<$Res> {
+  __$$_ErrorFailureCopyWithImpl(
+      _$_ErrorFailure _value, $Res Function(_$_ErrorFailure) _then)
+      : super(_value, (v) => _then(v as _$_ErrorFailure));
 
   @override
-  _ErrorFailure get _value => super._value as _ErrorFailure;
+  _$_ErrorFailure get _value => super._value as _$_ErrorFailure;
 
   @override
   $Res call({
     Object? value = freezed,
     Object? stackTrace = freezed,
   }) {
-    return _then(_ErrorFailure(
+    return _then(_$_ErrorFailure(
       value == freezed
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -446,7 +447,7 @@ class _$_ErrorFailure implements _ErrorFailure {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ErrorFailure &&
+            other is _$_ErrorFailure &&
             const DeepCollectionEquality().equals(other.value, value) &&
             const DeepCollectionEquality()
                 .equals(other.stackTrace, stackTrace));
@@ -460,8 +461,8 @@ class _$_ErrorFailure implements _ErrorFailure {
 
   @JsonKey(ignore: true)
   @override
-  _$ErrorFailureCopyWith<_ErrorFailure> get copyWith =>
-      __$ErrorFailureCopyWithImpl<_ErrorFailure>(this, _$identity);
+  _$$_ErrorFailureCopyWith<_$_ErrorFailure> get copyWith =>
+      __$$_ErrorFailureCopyWithImpl<_$_ErrorFailure>(this, _$identity);
 }
 
 abstract class _ErrorFailure implements Failure {
@@ -474,6 +475,6 @@ abstract class _ErrorFailure implements Failure {
   StackTrace? get stackTrace => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ErrorFailureCopyWith<_ErrorFailure> get copyWith =>
+  _$$_ErrorFailureCopyWith<_$_ErrorFailure> get copyWith =>
       throw _privateConstructorUsedError;
 }

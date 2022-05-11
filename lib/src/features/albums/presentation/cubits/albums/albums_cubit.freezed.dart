@@ -85,22 +85,22 @@ class _$AlbumsStateCopyWithImpl<$Res> implements $AlbumsStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$AlbumsInitialStateCopyWith<$Res> {
-  factory _$AlbumsInitialStateCopyWith(
-          _AlbumsInitialState value, $Res Function(_AlbumsInitialState) then) =
-      __$AlbumsInitialStateCopyWithImpl<$Res>;
+abstract class _$$_AlbumsInitialStateCopyWith<$Res> {
+  factory _$$_AlbumsInitialStateCopyWith(_$_AlbumsInitialState value,
+          $Res Function(_$_AlbumsInitialState) then) =
+      __$$_AlbumsInitialStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$AlbumsInitialStateCopyWithImpl<$Res>
+class __$$_AlbumsInitialStateCopyWithImpl<$Res>
     extends _$AlbumsStateCopyWithImpl<$Res>
-    implements _$AlbumsInitialStateCopyWith<$Res> {
-  __$AlbumsInitialStateCopyWithImpl(
-      _AlbumsInitialState _value, $Res Function(_AlbumsInitialState) _then)
-      : super(_value, (v) => _then(v as _AlbumsInitialState));
+    implements _$$_AlbumsInitialStateCopyWith<$Res> {
+  __$$_AlbumsInitialStateCopyWithImpl(
+      _$_AlbumsInitialState _value, $Res Function(_$_AlbumsInitialState) _then)
+      : super(_value, (v) => _then(v as _$_AlbumsInitialState));
 
   @override
-  _AlbumsInitialState get _value => super._value as _AlbumsInitialState;
+  _$_AlbumsInitialState get _value => super._value as _$_AlbumsInitialState;
 }
 
 /// @nodoc
@@ -116,7 +116,7 @@ class _$_AlbumsInitialState implements _AlbumsInitialState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _AlbumsInitialState);
+        (other.runtimeType == runtimeType && other is _$_AlbumsInitialState);
   }
 
   @override
@@ -202,22 +202,23 @@ abstract class _AlbumsInitialState implements AlbumsState {
 }
 
 /// @nodoc
-abstract class _$AlbumsInProgressStateCopyWith<$Res> {
-  factory _$AlbumsInProgressStateCopyWith(_AlbumsInProgressState value,
-          $Res Function(_AlbumsInProgressState) then) =
-      __$AlbumsInProgressStateCopyWithImpl<$Res>;
+abstract class _$$_AlbumsInProgressStateCopyWith<$Res> {
+  factory _$$_AlbumsInProgressStateCopyWith(_$_AlbumsInProgressState value,
+          $Res Function(_$_AlbumsInProgressState) then) =
+      __$$_AlbumsInProgressStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$AlbumsInProgressStateCopyWithImpl<$Res>
+class __$$_AlbumsInProgressStateCopyWithImpl<$Res>
     extends _$AlbumsStateCopyWithImpl<$Res>
-    implements _$AlbumsInProgressStateCopyWith<$Res> {
-  __$AlbumsInProgressStateCopyWithImpl(_AlbumsInProgressState _value,
-      $Res Function(_AlbumsInProgressState) _then)
-      : super(_value, (v) => _then(v as _AlbumsInProgressState));
+    implements _$$_AlbumsInProgressStateCopyWith<$Res> {
+  __$$_AlbumsInProgressStateCopyWithImpl(_$_AlbumsInProgressState _value,
+      $Res Function(_$_AlbumsInProgressState) _then)
+      : super(_value, (v) => _then(v as _$_AlbumsInProgressState));
 
   @override
-  _AlbumsInProgressState get _value => super._value as _AlbumsInProgressState;
+  _$_AlbumsInProgressState get _value =>
+      super._value as _$_AlbumsInProgressState;
 }
 
 /// @nodoc
@@ -233,7 +234,7 @@ class _$_AlbumsInProgressState implements _AlbumsInProgressState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _AlbumsInProgressState);
+        (other.runtimeType == runtimeType && other is _$_AlbumsInProgressState);
   }
 
   @override
@@ -319,31 +320,31 @@ abstract class _AlbumsInProgressState implements AlbumsState {
 }
 
 /// @nodoc
-abstract class _$AlbumsSuccessStateCopyWith<$Res> {
-  factory _$AlbumsSuccessStateCopyWith(
-          _AlbumsSuccessState value, $Res Function(_AlbumsSuccessState) then) =
-      __$AlbumsSuccessStateCopyWithImpl<$Res>;
+abstract class _$$_AlbumsSuccessStateCopyWith<$Res> {
+  factory _$$_AlbumsSuccessStateCopyWith(_$_AlbumsSuccessState value,
+          $Res Function(_$_AlbumsSuccessState) then) =
+      __$$_AlbumsSuccessStateCopyWithImpl<$Res>;
   $Res call({List<Album> albums});
 }
 
 /// @nodoc
-class __$AlbumsSuccessStateCopyWithImpl<$Res>
+class __$$_AlbumsSuccessStateCopyWithImpl<$Res>
     extends _$AlbumsStateCopyWithImpl<$Res>
-    implements _$AlbumsSuccessStateCopyWith<$Res> {
-  __$AlbumsSuccessStateCopyWithImpl(
-      _AlbumsSuccessState _value, $Res Function(_AlbumsSuccessState) _then)
-      : super(_value, (v) => _then(v as _AlbumsSuccessState));
+    implements _$$_AlbumsSuccessStateCopyWith<$Res> {
+  __$$_AlbumsSuccessStateCopyWithImpl(
+      _$_AlbumsSuccessState _value, $Res Function(_$_AlbumsSuccessState) _then)
+      : super(_value, (v) => _then(v as _$_AlbumsSuccessState));
 
   @override
-  _AlbumsSuccessState get _value => super._value as _AlbumsSuccessState;
+  _$_AlbumsSuccessState get _value => super._value as _$_AlbumsSuccessState;
 
   @override
   $Res call({
     Object? albums = freezed,
   }) {
-    return _then(_AlbumsSuccessState(
+    return _then(_$_AlbumsSuccessState(
       albums == freezed
-          ? _value.albums
+          ? _value._albums
           : albums // ignore: cast_nullable_to_non_nullable
               as List<Album>,
     ));
@@ -371,18 +372,19 @@ class _$_AlbumsSuccessState implements _AlbumsSuccessState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AlbumsSuccessState &&
-            const DeepCollectionEquality().equals(other.albums, albums));
+            other is _$_AlbumsSuccessState &&
+            const DeepCollectionEquality().equals(other._albums, _albums));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(albums));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_albums));
 
   @JsonKey(ignore: true)
   @override
-  _$AlbumsSuccessStateCopyWith<_AlbumsSuccessState> get copyWith =>
-      __$AlbumsSuccessStateCopyWithImpl<_AlbumsSuccessState>(this, _$identity);
+  _$$_AlbumsSuccessStateCopyWith<_$_AlbumsSuccessState> get copyWith =>
+      __$$_AlbumsSuccessStateCopyWithImpl<_$_AlbumsSuccessState>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -465,36 +467,36 @@ abstract class _AlbumsSuccessState implements AlbumsState {
 
   List<Album> get albums => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$AlbumsSuccessStateCopyWith<_AlbumsSuccessState> get copyWith =>
+  _$$_AlbumsSuccessStateCopyWith<_$_AlbumsSuccessState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$AlbumsFailureStateCopyWith<$Res> {
-  factory _$AlbumsFailureStateCopyWith(
-          _AlbumsFailureState value, $Res Function(_AlbumsFailureState) then) =
-      __$AlbumsFailureStateCopyWithImpl<$Res>;
+abstract class _$$_AlbumsFailureStateCopyWith<$Res> {
+  factory _$$_AlbumsFailureStateCopyWith(_$_AlbumsFailureState value,
+          $Res Function(_$_AlbumsFailureState) then) =
+      __$$_AlbumsFailureStateCopyWithImpl<$Res>;
   $Res call({Failure failure});
 
   $FailureCopyWith<$Res> get failure;
 }
 
 /// @nodoc
-class __$AlbumsFailureStateCopyWithImpl<$Res>
+class __$$_AlbumsFailureStateCopyWithImpl<$Res>
     extends _$AlbumsStateCopyWithImpl<$Res>
-    implements _$AlbumsFailureStateCopyWith<$Res> {
-  __$AlbumsFailureStateCopyWithImpl(
-      _AlbumsFailureState _value, $Res Function(_AlbumsFailureState) _then)
-      : super(_value, (v) => _then(v as _AlbumsFailureState));
+    implements _$$_AlbumsFailureStateCopyWith<$Res> {
+  __$$_AlbumsFailureStateCopyWithImpl(
+      _$_AlbumsFailureState _value, $Res Function(_$_AlbumsFailureState) _then)
+      : super(_value, (v) => _then(v as _$_AlbumsFailureState));
 
   @override
-  _AlbumsFailureState get _value => super._value as _AlbumsFailureState;
+  _$_AlbumsFailureState get _value => super._value as _$_AlbumsFailureState;
 
   @override
   $Res call({
     Object? failure = freezed,
   }) {
-    return _then(_AlbumsFailureState(
+    return _then(_$_AlbumsFailureState(
       failure == freezed
           ? _value.failure
           : failure // ignore: cast_nullable_to_non_nullable
@@ -527,7 +529,7 @@ class _$_AlbumsFailureState implements _AlbumsFailureState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AlbumsFailureState &&
+            other is _$_AlbumsFailureState &&
             const DeepCollectionEquality().equals(other.failure, failure));
   }
 
@@ -537,8 +539,9 @@ class _$_AlbumsFailureState implements _AlbumsFailureState {
 
   @JsonKey(ignore: true)
   @override
-  _$AlbumsFailureStateCopyWith<_AlbumsFailureState> get copyWith =>
-      __$AlbumsFailureStateCopyWithImpl<_AlbumsFailureState>(this, _$identity);
+  _$$_AlbumsFailureStateCopyWith<_$_AlbumsFailureState> get copyWith =>
+      __$$_AlbumsFailureStateCopyWithImpl<_$_AlbumsFailureState>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -621,6 +624,6 @@ abstract class _AlbumsFailureState implements AlbumsState {
 
   Failure get failure => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$AlbumsFailureStateCopyWith<_AlbumsFailureState> get copyWith =>
+  _$$_AlbumsFailureStateCopyWith<_$_AlbumsFailureState> get copyWith =>
       throw _privateConstructorUsedError;
 }

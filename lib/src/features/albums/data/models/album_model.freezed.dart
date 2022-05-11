@@ -70,23 +70,24 @@ class _$AlbumModelCopyWithImpl<$Res> implements $AlbumModelCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$AlbumModelCopyWith<$Res> implements $AlbumModelCopyWith<$Res> {
-  factory _$AlbumModelCopyWith(
-          _AlbumModel value, $Res Function(_AlbumModel) then) =
-      __$AlbumModelCopyWithImpl<$Res>;
+abstract class _$$_AlbumModelCopyWith<$Res>
+    implements $AlbumModelCopyWith<$Res> {
+  factory _$$_AlbumModelCopyWith(
+          _$_AlbumModel value, $Res Function(_$_AlbumModel) then) =
+      __$$_AlbumModelCopyWithImpl<$Res>;
   @override
   $Res call({int id, int userId, String? title});
 }
 
 /// @nodoc
-class __$AlbumModelCopyWithImpl<$Res> extends _$AlbumModelCopyWithImpl<$Res>
-    implements _$AlbumModelCopyWith<$Res> {
-  __$AlbumModelCopyWithImpl(
-      _AlbumModel _value, $Res Function(_AlbumModel) _then)
-      : super(_value, (v) => _then(v as _AlbumModel));
+class __$$_AlbumModelCopyWithImpl<$Res> extends _$AlbumModelCopyWithImpl<$Res>
+    implements _$$_AlbumModelCopyWith<$Res> {
+  __$$_AlbumModelCopyWithImpl(
+      _$_AlbumModel _value, $Res Function(_$_AlbumModel) _then)
+      : super(_value, (v) => _then(v as _$_AlbumModel));
 
   @override
-  _AlbumModel get _value => super._value as _AlbumModel;
+  _$_AlbumModel get _value => super._value as _$_AlbumModel;
 
   @override
   $Res call({
@@ -94,7 +95,7 @@ class __$AlbumModelCopyWithImpl<$Res> extends _$AlbumModelCopyWithImpl<$Res>
     Object? userId = freezed,
     Object? title = freezed,
   }) {
-    return _then(_AlbumModel(
+    return _then(_$_AlbumModel(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -135,7 +136,7 @@ class _$_AlbumModel implements _AlbumModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AlbumModel &&
+            other is _$_AlbumModel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.userId, userId) &&
             const DeepCollectionEquality().equals(other.title, title));
@@ -151,8 +152,8 @@ class _$_AlbumModel implements _AlbumModel {
 
   @JsonKey(ignore: true)
   @override
-  _$AlbumModelCopyWith<_AlbumModel> get copyWith =>
-      __$AlbumModelCopyWithImpl<_AlbumModel>(this, _$identity);
+  _$$_AlbumModelCopyWith<_$_AlbumModel> get copyWith =>
+      __$$_AlbumModelCopyWithImpl<_$_AlbumModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -177,6 +178,6 @@ abstract class _AlbumModel implements AlbumModel {
   String? get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AlbumModelCopyWith<_AlbumModel> get copyWith =>
+  _$$_AlbumModelCopyWith<_$_AlbumModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

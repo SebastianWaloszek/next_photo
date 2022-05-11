@@ -83,24 +83,25 @@ class _$PhotoModelCopyWithImpl<$Res> implements $PhotoModelCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$PhotoModelCopyWith<$Res> implements $PhotoModelCopyWith<$Res> {
-  factory _$PhotoModelCopyWith(
-          _PhotoModel value, $Res Function(_PhotoModel) then) =
-      __$PhotoModelCopyWithImpl<$Res>;
+abstract class _$$_PhotoModelCopyWith<$Res>
+    implements $PhotoModelCopyWith<$Res> {
+  factory _$$_PhotoModelCopyWith(
+          _$_PhotoModel value, $Res Function(_$_PhotoModel) then) =
+      __$$_PhotoModelCopyWithImpl<$Res>;
   @override
   $Res call(
       {int id, int albumId, String? title, String url, String thumbnailUrl});
 }
 
 /// @nodoc
-class __$PhotoModelCopyWithImpl<$Res> extends _$PhotoModelCopyWithImpl<$Res>
-    implements _$PhotoModelCopyWith<$Res> {
-  __$PhotoModelCopyWithImpl(
-      _PhotoModel _value, $Res Function(_PhotoModel) _then)
-      : super(_value, (v) => _then(v as _PhotoModel));
+class __$$_PhotoModelCopyWithImpl<$Res> extends _$PhotoModelCopyWithImpl<$Res>
+    implements _$$_PhotoModelCopyWith<$Res> {
+  __$$_PhotoModelCopyWithImpl(
+      _$_PhotoModel _value, $Res Function(_$_PhotoModel) _then)
+      : super(_value, (v) => _then(v as _$_PhotoModel));
 
   @override
-  _PhotoModel get _value => super._value as _PhotoModel;
+  _$_PhotoModel get _value => super._value as _$_PhotoModel;
 
   @override
   $Res call({
@@ -110,7 +111,7 @@ class __$PhotoModelCopyWithImpl<$Res> extends _$PhotoModelCopyWithImpl<$Res>
     Object? url = freezed,
     Object? thumbnailUrl = freezed,
   }) {
-    return _then(_PhotoModel(
+    return _then(_$_PhotoModel(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -168,7 +169,7 @@ class _$_PhotoModel implements _PhotoModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PhotoModel &&
+            other is _$_PhotoModel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.albumId, albumId) &&
             const DeepCollectionEquality().equals(other.title, title) &&
@@ -189,8 +190,8 @@ class _$_PhotoModel implements _PhotoModel {
 
   @JsonKey(ignore: true)
   @override
-  _$PhotoModelCopyWith<_PhotoModel> get copyWith =>
-      __$PhotoModelCopyWithImpl<_PhotoModel>(this, _$identity);
+  _$$_PhotoModelCopyWith<_$_PhotoModel> get copyWith =>
+      __$$_PhotoModelCopyWithImpl<_$_PhotoModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -221,6 +222,6 @@ abstract class _PhotoModel implements PhotoModel {
   String get thumbnailUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PhotoModelCopyWith<_PhotoModel> get copyWith =>
+  _$$_PhotoModelCopyWith<_$_PhotoModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

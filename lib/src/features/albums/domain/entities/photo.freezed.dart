@@ -87,9 +87,9 @@ class _$PhotoCopyWithImpl<$Res> implements $PhotoCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$PhotoCopyWith<$Res> implements $PhotoCopyWith<$Res> {
-  factory _$PhotoCopyWith(_Photo value, $Res Function(_Photo) then) =
-      __$PhotoCopyWithImpl<$Res>;
+abstract class _$$_PhotoCopyWith<$Res> implements $PhotoCopyWith<$Res> {
+  factory _$$_PhotoCopyWith(_$_Photo value, $Res Function(_$_Photo) then) =
+      __$$_PhotoCopyWithImpl<$Res>;
   @override
   $Res call(
       {PhotoId id,
@@ -101,13 +101,13 @@ abstract class _$PhotoCopyWith<$Res> implements $PhotoCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$PhotoCopyWithImpl<$Res> extends _$PhotoCopyWithImpl<$Res>
-    implements _$PhotoCopyWith<$Res> {
-  __$PhotoCopyWithImpl(_Photo _value, $Res Function(_Photo) _then)
-      : super(_value, (v) => _then(v as _Photo));
+class __$$_PhotoCopyWithImpl<$Res> extends _$PhotoCopyWithImpl<$Res>
+    implements _$$_PhotoCopyWith<$Res> {
+  __$$_PhotoCopyWithImpl(_$_Photo _value, $Res Function(_$_Photo) _then)
+      : super(_value, (v) => _then(v as _$_Photo));
 
   @override
-  _Photo get _value => super._value as _Photo;
+  _$_Photo get _value => super._value as _$_Photo;
 
   @override
   $Res call({
@@ -118,7 +118,7 @@ class __$PhotoCopyWithImpl<$Res> extends _$PhotoCopyWithImpl<$Res>
     Object? thumbnailUrl = freezed,
     Object? isLiked = freezed,
   }) {
-    return _then(_Photo(
+    return _then(_$_Photo(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -181,7 +181,7 @@ class _$_Photo implements _Photo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Photo &&
+            other is _$_Photo &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.albumId, albumId) &&
             const DeepCollectionEquality().equals(other.title, title) &&
@@ -203,8 +203,8 @@ class _$_Photo implements _Photo {
 
   @JsonKey(ignore: true)
   @override
-  _$PhotoCopyWith<_Photo> get copyWith =>
-      __$PhotoCopyWithImpl<_Photo>(this, _$identity);
+  _$$_PhotoCopyWith<_$_Photo> get copyWith =>
+      __$$_PhotoCopyWithImpl<_$_Photo>(this, _$identity);
 }
 
 abstract class _Photo implements Photo {
@@ -230,5 +230,6 @@ abstract class _Photo implements Photo {
   bool get isLiked => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PhotoCopyWith<_Photo> get copyWith => throw _privateConstructorUsedError;
+  _$$_PhotoCopyWith<_$_Photo> get copyWith =>
+      throw _privateConstructorUsedError;
 }

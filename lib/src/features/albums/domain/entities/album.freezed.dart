@@ -63,21 +63,21 @@ class _$AlbumCopyWithImpl<$Res> implements $AlbumCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$AlbumCopyWith<$Res> implements $AlbumCopyWith<$Res> {
-  factory _$AlbumCopyWith(_Album value, $Res Function(_Album) then) =
-      __$AlbumCopyWithImpl<$Res>;
+abstract class _$$_AlbumCopyWith<$Res> implements $AlbumCopyWith<$Res> {
+  factory _$$_AlbumCopyWith(_$_Album value, $Res Function(_$_Album) then) =
+      __$$_AlbumCopyWithImpl<$Res>;
   @override
   $Res call({AlbumId id, UserId userId, String title});
 }
 
 /// @nodoc
-class __$AlbumCopyWithImpl<$Res> extends _$AlbumCopyWithImpl<$Res>
-    implements _$AlbumCopyWith<$Res> {
-  __$AlbumCopyWithImpl(_Album _value, $Res Function(_Album) _then)
-      : super(_value, (v) => _then(v as _Album));
+class __$$_AlbumCopyWithImpl<$Res> extends _$AlbumCopyWithImpl<$Res>
+    implements _$$_AlbumCopyWith<$Res> {
+  __$$_AlbumCopyWithImpl(_$_Album _value, $Res Function(_$_Album) _then)
+      : super(_value, (v) => _then(v as _$_Album));
 
   @override
-  _Album get _value => super._value as _Album;
+  _$_Album get _value => super._value as _$_Album;
 
   @override
   $Res call({
@@ -85,7 +85,7 @@ class __$AlbumCopyWithImpl<$Res> extends _$AlbumCopyWithImpl<$Res>
     Object? userId = freezed,
     Object? title = freezed,
   }) {
-    return _then(_Album(
+    return _then(_$_Album(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -123,7 +123,7 @@ class _$_Album implements _Album {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Album &&
+            other is _$_Album &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.userId, userId) &&
             const DeepCollectionEquality().equals(other.title, title));
@@ -138,8 +138,8 @@ class _$_Album implements _Album {
 
   @JsonKey(ignore: true)
   @override
-  _$AlbumCopyWith<_Album> get copyWith =>
-      __$AlbumCopyWithImpl<_Album>(this, _$identity);
+  _$$_AlbumCopyWith<_$_Album> get copyWith =>
+      __$$_AlbumCopyWithImpl<_$_Album>(this, _$identity);
 }
 
 abstract class _Album implements Album {
@@ -156,5 +156,6 @@ abstract class _Album implements Album {
   String get title => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AlbumCopyWith<_Album> get copyWith => throw _privateConstructorUsedError;
+  _$$_AlbumCopyWith<_$_Album> get copyWith =>
+      throw _privateConstructorUsedError;
 }

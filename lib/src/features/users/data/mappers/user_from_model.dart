@@ -13,10 +13,14 @@ class UserFromModel implements Mapper<UserModel, User> {
       name: userModel.name,
       username: userModel.username,
       email: userModel.email,
-      address: AddressFromModel()(userModel.address!),
+      address: userModel.address != null
+          ? AddressFromModel()(userModel.address!)
+          : null,
       phone: userModel.phone,
       websiteUrl: userModel.website,
-      company: CompanyFromModel()(userModel.company!),
+      company: userModel.company != null
+          ? CompanyFromModel()(userModel.company!)
+          : null,
     );
   }
 }

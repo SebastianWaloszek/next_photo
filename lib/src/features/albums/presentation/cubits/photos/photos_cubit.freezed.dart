@@ -85,22 +85,22 @@ class _$PhotosStateCopyWithImpl<$Res> implements $PhotosStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$PhotosInitialStateCopyWith<$Res> {
-  factory _$PhotosInitialStateCopyWith(
-          _PhotosInitialState value, $Res Function(_PhotosInitialState) then) =
-      __$PhotosInitialStateCopyWithImpl<$Res>;
+abstract class _$$_PhotosInitialStateCopyWith<$Res> {
+  factory _$$_PhotosInitialStateCopyWith(_$_PhotosInitialState value,
+          $Res Function(_$_PhotosInitialState) then) =
+      __$$_PhotosInitialStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$PhotosInitialStateCopyWithImpl<$Res>
+class __$$_PhotosInitialStateCopyWithImpl<$Res>
     extends _$PhotosStateCopyWithImpl<$Res>
-    implements _$PhotosInitialStateCopyWith<$Res> {
-  __$PhotosInitialStateCopyWithImpl(
-      _PhotosInitialState _value, $Res Function(_PhotosInitialState) _then)
-      : super(_value, (v) => _then(v as _PhotosInitialState));
+    implements _$$_PhotosInitialStateCopyWith<$Res> {
+  __$$_PhotosInitialStateCopyWithImpl(
+      _$_PhotosInitialState _value, $Res Function(_$_PhotosInitialState) _then)
+      : super(_value, (v) => _then(v as _$_PhotosInitialState));
 
   @override
-  _PhotosInitialState get _value => super._value as _PhotosInitialState;
+  _$_PhotosInitialState get _value => super._value as _$_PhotosInitialState;
 }
 
 /// @nodoc
@@ -116,7 +116,7 @@ class _$_PhotosInitialState implements _PhotosInitialState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _PhotosInitialState);
+        (other.runtimeType == runtimeType && other is _$_PhotosInitialState);
   }
 
   @override
@@ -202,22 +202,23 @@ abstract class _PhotosInitialState implements PhotosState {
 }
 
 /// @nodoc
-abstract class _$PhotosInProgressStateCopyWith<$Res> {
-  factory _$PhotosInProgressStateCopyWith(_PhotosInProgressState value,
-          $Res Function(_PhotosInProgressState) then) =
-      __$PhotosInProgressStateCopyWithImpl<$Res>;
+abstract class _$$_PhotosInProgressStateCopyWith<$Res> {
+  factory _$$_PhotosInProgressStateCopyWith(_$_PhotosInProgressState value,
+          $Res Function(_$_PhotosInProgressState) then) =
+      __$$_PhotosInProgressStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$PhotosInProgressStateCopyWithImpl<$Res>
+class __$$_PhotosInProgressStateCopyWithImpl<$Res>
     extends _$PhotosStateCopyWithImpl<$Res>
-    implements _$PhotosInProgressStateCopyWith<$Res> {
-  __$PhotosInProgressStateCopyWithImpl(_PhotosInProgressState _value,
-      $Res Function(_PhotosInProgressState) _then)
-      : super(_value, (v) => _then(v as _PhotosInProgressState));
+    implements _$$_PhotosInProgressStateCopyWith<$Res> {
+  __$$_PhotosInProgressStateCopyWithImpl(_$_PhotosInProgressState _value,
+      $Res Function(_$_PhotosInProgressState) _then)
+      : super(_value, (v) => _then(v as _$_PhotosInProgressState));
 
   @override
-  _PhotosInProgressState get _value => super._value as _PhotosInProgressState;
+  _$_PhotosInProgressState get _value =>
+      super._value as _$_PhotosInProgressState;
 }
 
 /// @nodoc
@@ -233,7 +234,7 @@ class _$_PhotosInProgressState implements _PhotosInProgressState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _PhotosInProgressState);
+        (other.runtimeType == runtimeType && other is _$_PhotosInProgressState);
   }
 
   @override
@@ -319,31 +320,31 @@ abstract class _PhotosInProgressState implements PhotosState {
 }
 
 /// @nodoc
-abstract class _$PhotosSuccessStateCopyWith<$Res> {
-  factory _$PhotosSuccessStateCopyWith(
-          _PhotosSuccessState value, $Res Function(_PhotosSuccessState) then) =
-      __$PhotosSuccessStateCopyWithImpl<$Res>;
+abstract class _$$_PhotosSuccessStateCopyWith<$Res> {
+  factory _$$_PhotosSuccessStateCopyWith(_$_PhotosSuccessState value,
+          $Res Function(_$_PhotosSuccessState) then) =
+      __$$_PhotosSuccessStateCopyWithImpl<$Res>;
   $Res call({List<Photo> photos});
 }
 
 /// @nodoc
-class __$PhotosSuccessStateCopyWithImpl<$Res>
+class __$$_PhotosSuccessStateCopyWithImpl<$Res>
     extends _$PhotosStateCopyWithImpl<$Res>
-    implements _$PhotosSuccessStateCopyWith<$Res> {
-  __$PhotosSuccessStateCopyWithImpl(
-      _PhotosSuccessState _value, $Res Function(_PhotosSuccessState) _then)
-      : super(_value, (v) => _then(v as _PhotosSuccessState));
+    implements _$$_PhotosSuccessStateCopyWith<$Res> {
+  __$$_PhotosSuccessStateCopyWithImpl(
+      _$_PhotosSuccessState _value, $Res Function(_$_PhotosSuccessState) _then)
+      : super(_value, (v) => _then(v as _$_PhotosSuccessState));
 
   @override
-  _PhotosSuccessState get _value => super._value as _PhotosSuccessState;
+  _$_PhotosSuccessState get _value => super._value as _$_PhotosSuccessState;
 
   @override
   $Res call({
     Object? photos = freezed,
   }) {
-    return _then(_PhotosSuccessState(
+    return _then(_$_PhotosSuccessState(
       photos == freezed
-          ? _value.photos
+          ? _value._photos
           : photos // ignore: cast_nullable_to_non_nullable
               as List<Photo>,
     ));
@@ -371,18 +372,19 @@ class _$_PhotosSuccessState implements _PhotosSuccessState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PhotosSuccessState &&
-            const DeepCollectionEquality().equals(other.photos, photos));
+            other is _$_PhotosSuccessState &&
+            const DeepCollectionEquality().equals(other._photos, _photos));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(photos));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_photos));
 
   @JsonKey(ignore: true)
   @override
-  _$PhotosSuccessStateCopyWith<_PhotosSuccessState> get copyWith =>
-      __$PhotosSuccessStateCopyWithImpl<_PhotosSuccessState>(this, _$identity);
+  _$$_PhotosSuccessStateCopyWith<_$_PhotosSuccessState> get copyWith =>
+      __$$_PhotosSuccessStateCopyWithImpl<_$_PhotosSuccessState>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -465,36 +467,36 @@ abstract class _PhotosSuccessState implements PhotosState {
 
   List<Photo> get photos => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$PhotosSuccessStateCopyWith<_PhotosSuccessState> get copyWith =>
+  _$$_PhotosSuccessStateCopyWith<_$_PhotosSuccessState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$PhotosFailureStateCopyWith<$Res> {
-  factory _$PhotosFailureStateCopyWith(
-          _PhotosFailureState value, $Res Function(_PhotosFailureState) then) =
-      __$PhotosFailureStateCopyWithImpl<$Res>;
+abstract class _$$_PhotosFailureStateCopyWith<$Res> {
+  factory _$$_PhotosFailureStateCopyWith(_$_PhotosFailureState value,
+          $Res Function(_$_PhotosFailureState) then) =
+      __$$_PhotosFailureStateCopyWithImpl<$Res>;
   $Res call({Failure failure});
 
   $FailureCopyWith<$Res> get failure;
 }
 
 /// @nodoc
-class __$PhotosFailureStateCopyWithImpl<$Res>
+class __$$_PhotosFailureStateCopyWithImpl<$Res>
     extends _$PhotosStateCopyWithImpl<$Res>
-    implements _$PhotosFailureStateCopyWith<$Res> {
-  __$PhotosFailureStateCopyWithImpl(
-      _PhotosFailureState _value, $Res Function(_PhotosFailureState) _then)
-      : super(_value, (v) => _then(v as _PhotosFailureState));
+    implements _$$_PhotosFailureStateCopyWith<$Res> {
+  __$$_PhotosFailureStateCopyWithImpl(
+      _$_PhotosFailureState _value, $Res Function(_$_PhotosFailureState) _then)
+      : super(_value, (v) => _then(v as _$_PhotosFailureState));
 
   @override
-  _PhotosFailureState get _value => super._value as _PhotosFailureState;
+  _$_PhotosFailureState get _value => super._value as _$_PhotosFailureState;
 
   @override
   $Res call({
     Object? failure = freezed,
   }) {
-    return _then(_PhotosFailureState(
+    return _then(_$_PhotosFailureState(
       failure == freezed
           ? _value.failure
           : failure // ignore: cast_nullable_to_non_nullable
@@ -527,7 +529,7 @@ class _$_PhotosFailureState implements _PhotosFailureState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PhotosFailureState &&
+            other is _$_PhotosFailureState &&
             const DeepCollectionEquality().equals(other.failure, failure));
   }
 
@@ -537,8 +539,9 @@ class _$_PhotosFailureState implements _PhotosFailureState {
 
   @JsonKey(ignore: true)
   @override
-  _$PhotosFailureStateCopyWith<_PhotosFailureState> get copyWith =>
-      __$PhotosFailureStateCopyWithImpl<_PhotosFailureState>(this, _$identity);
+  _$$_PhotosFailureStateCopyWith<_$_PhotosFailureState> get copyWith =>
+      __$$_PhotosFailureStateCopyWithImpl<_$_PhotosFailureState>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -621,6 +624,6 @@ abstract class _PhotosFailureState implements PhotosState {
 
   Failure get failure => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$PhotosFailureStateCopyWith<_PhotosFailureState> get copyWith =>
+  _$$_PhotosFailureStateCopyWith<_$_PhotosFailureState> get copyWith =>
       throw _privateConstructorUsedError;
 }
