@@ -50,7 +50,7 @@ class PhotoRepositoryImpl implements PhotoRepository {
 
       return Result(photos);
     } catch (e, s) {
-      _logger.e('Getting all available photos has failed!', e, s);
+      _logger.e('Getting all photos has failed!', e, s);
 
       return Result.failure(Failure(e, s));
     }

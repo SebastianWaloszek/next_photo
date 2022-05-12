@@ -20,8 +20,8 @@ class PhotoLikeCubit extends Cubit<PhotoLikeState> {
   final SetPhotoLike _setPhotoLike;
 
   /// Updates the given photo's like status.
-  Future<void> updatePhotoLike(
-    Photo photo, {
+  Future<void> setPhotoLike(
+    PhotoId photoId, {
     required bool like,
   }) async {
     emit(
@@ -30,7 +30,7 @@ class PhotoLikeCubit extends Cubit<PhotoLikeState> {
 
     final result = await _setPhotoLike(
       SetPhotoLikeParams(
-        photoId: photo.id,
+        photoId: photoId,
         like: like,
       ),
     );

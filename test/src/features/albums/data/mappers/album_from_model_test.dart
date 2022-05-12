@@ -1,28 +1,19 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:next_blog/src/features/users/data/mappers/address_from_model.dart';
-import 'package:next_blog/src/features/users/data/models/user_model.dart';
+import 'package:next_blog/src/features/albums/data/mappers/album_from_model.dart';
+import 'package:next_blog/src/features/albums/data/models/album_model.dart';
+import 'package:next_blog/src/features/albums/domain/entities/album.dart';
 import 'package:next_blog/src/features/users/domain/entities/user.dart';
 
 void main() {
   group(
-    '$AddressFromModel',
+    '$AlbumFromModel',
     () {
       test(
-        'Should map address model to entity',
+        'Should map album model to entity',
         () {
           expect(
-            AddressFromModel()(_addressModel),
-            _address,
-          );
-        },
-      );
-
-      test(
-        'Should map address model with geolocation to entity',
-        () {
-          expect(
-            AddressFromModel()(_addressModelWihGeoLocation),
-            _addressWihGeoLocation,
+            AlbumFromModel()(_albumModel),
+            _album,
           );
         },
       );
@@ -30,24 +21,14 @@ void main() {
   );
 }
 
-const _addressModel = AddressModel(
-  street: 'street',
-  suite: 'suite',
-  city: 'city',
-  zipCode: 'zipCode',
+const _albumModel = AlbumModel(
+  id: 1,
+  userId: 1,
+  title: 'title',
 );
 
-final _addressModelWihGeoLocation = _addressModel.copyWith(
-  geo: const GeoLocationModel(lat: 1, lng: 1),
-);
-
-const _address = Address(
-  street: 'street',
-  suite: 'suite',
-  city: 'city',
-  zipCode: 'zipCode',
-);
-
-final _addressWihGeoLocation = _address.copyWith(
-  geoLocation: const GeoLocation(latitude: 1, longitude: 1),
+const _album = Album(
+  id: AlbumId(1),
+  userId: UserId(1),
+  title: 'title',
 );
