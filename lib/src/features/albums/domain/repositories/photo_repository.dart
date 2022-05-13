@@ -10,6 +10,9 @@ abstract class PhotoRepository {
   /// Returns result with all available photos.
   Future<Result<List<Photo>>> getAllPhotos();
 
+  /// Returns result with a single photo.
+  Future<Result<Photo>> getPhoto(PhotoId photoId);
+
   /// Updates whether a given photo is liked or unliked.
   Future<Result<void>> setPhotoLike(
     PhotoId id, {

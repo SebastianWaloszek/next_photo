@@ -6,6 +6,12 @@ import 'package:next_blog/src/features/albums/data/sources/album_data_source.dar
 @LazySingleton(as: AlbumDataSource)
 class AlbumRestDataSource implements AlbumDataSource {
   @override
+  Future<AlbumModel> getAlbum({required int albumId}) {
+    // TODO: implement getAlbum
+    throw UnimplementedError();
+  }
+
+  @override
   Future<List<AlbumModel>> getAllAlbums() {
     // TODO: implement getAllAlbums
     throw UnimplementedError();

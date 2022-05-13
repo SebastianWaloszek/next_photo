@@ -57,6 +57,20 @@ class PhotoRepositoryImpl implements PhotoRepository {
   }
 
   @override
+  Future<Result<Photo>> getPhoto(PhotoId photoId) async {
+    try {
+      final photoModel = await _dataSource.getPhoto(photoId: photoId.value);
+      final photo = await _mapPhotoFromModel(photoModel);
+
+      return Result(photo);
+    } catch (e, s) {
+      _logger.e('Getting photo ${photoId.value} has failed!', e, s);
+
+      return Result.failure(Failure(e, s));
+    }
+  }
+
+  @override
   Future<Result<void>> setPhotoLike(
     PhotoId id, {
     required bool like,

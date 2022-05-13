@@ -16,4 +16,10 @@ class PhotoRestDataSource implements PhotoDataSource {
     // TODO: implement getAllPhotos
     throw UnimplementedError();
   }
+
+  @override
+  Future<PhotoModel> getPhoto({required int photoId}) {
+    // TODO: implement getPhotos
+    throw UnimplementedError();
+  }
 }

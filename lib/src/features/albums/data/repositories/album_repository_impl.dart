@@ -34,6 +34,18 @@ class AlbumRepositoryImpl implements AlbumRepository {
   }
 
   @override
+  Future<Result<Album>> getAlbum(AlbumId albumId) async {
+    try {
+      final albumModel = await _dataSource.getAlbum(albumId: albumId.value);
+      final album = AlbumFromModel()(albumModel);
+      return Result(album);
+    } catch (e, s) {
+      _logger.e('Getting album ${albumId.value} has failed!', e, s);
+      return Result.failure(Failure(e, s));
+    }
+  }
+
+  @override
   Future<Result<List<Album>>> getUserAlbums(UserId userId) async {
     try {
       final albumsModels = await _dataSource.getUserAlbums(

@@ -5,6 +5,9 @@ abstract class AlbumDataSource {
   /// Returns list with all available albums models.
   Future<List<AlbumModel>> getAllAlbums();
 
+  /// Returns a single album model.
+  Future<AlbumModel> getAlbum({required int albumId});
+
   /// Returns list with all albums models from a given user.
   Future<List<AlbumModel>> getUserAlbums({required int userId});
 }

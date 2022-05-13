@@ -72,6 +72,52 @@ void main() {
       );
 
       test(
+        'should return result with album when getting album succeeds',
+        () async {
+          when(
+            () => dataSource.getAlbum(albumId: albumId1.value),
+          ).thenAnswer(
+            (_) async => albumModel1,
+          );
+
+          final result = await repository.getAlbum(albumId1);
+
+          result.when(
+            (value) {
+              expect(value, album1);
+              verifyZeroInteractions(logger);
+            },
+            failure: (failure) => throw failure,
+          );
+        },
+      );
+
+      test(
+        'should return result with failure when getting album fails',
+        () async {
+          when(
+            () => dataSource.getAlbum(albumId: albumId1.value),
+          ).thenThrow('Failure');
+
+          final result = await repository.getAlbum(albumId1);
+
+          result.when(
+            (value) => throw value,
+            failure: (failure) {
+              verify(
+                () => logger.e(
+                  'Getting album ${albumId1.value} has failed!',
+                  'Failure',
+                  any(),
+                ),
+              ).called(1);
+              verifyNoMoreInteractions(logger);
+            },
+          );
+        },
+      );
+
+      test(
         'should return result with albums when getting user albums succeeds',
         () async {
           when(

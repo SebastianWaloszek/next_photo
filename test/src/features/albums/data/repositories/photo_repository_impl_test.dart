@@ -82,6 +82,52 @@ void main() {
       );
 
       test(
+        'should return result with photo when getting photo succeeds',
+        () async {
+          when(
+            () => dataSource.getPhoto(photoId: photoId1.value),
+          ).thenAnswer(
+            (_) async => photoModel1,
+          );
+
+          final result = await repository.getPhoto(photoId1);
+
+          result.when(
+            (value) {
+              expect(value, photo1);
+              verifyZeroInteractions(logger);
+            },
+            failure: (failure) => throw failure,
+          );
+        },
+      );
+
+      test(
+        'should return result with failure when getting photo fails',
+        () async {
+          when(
+            () => dataSource.getPhoto(photoId: photoId1.value),
+          ).thenThrow('Failure');
+
+          final result = await repository.getPhoto(photoId1);
+
+          result.when(
+            (value) => throw value,
+            failure: (failure) {
+              verify(
+                () => logger.e(
+                  'Getting photo ${photoId1.value} has failed!',
+                  'Failure',
+                  any(),
+                ),
+              ).called(1);
+              verifyNoMoreInteractions(logger);
+            },
+          );
+        },
+      );
+
+      test(
         'should return result with photos when getting album photos succeeds',
         () async {
           when(
