@@ -31,7 +31,7 @@ class AddressModel with _$AddressModel {
     required String street,
     required String suite,
     required String city,
-    required String zipCode,
+    required String zipcode,
     GeoLocationModel? geo,
   }) = _AddressModel;
 
@@ -45,8 +45,8 @@ class AddressModel with _$AddressModel {
 class GeoLocationModel with _$GeoLocationModel {
   /// Creates a geo location model.
   const factory GeoLocationModel({
-    required double lat,
-    required double lng,
+    required String lat,
+    required String lng,
   }) = _GeoLocationModel;
 
   /// Creates a geo location model from json.

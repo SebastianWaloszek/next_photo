@@ -1,19 +1,30 @@
+import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:next_blog/src/features/users/data/models/user_model.dart';
 import 'package:next_blog/src/features/users/data/sources/user_data_source.dart';
 
+import 'package:retrofit/retrofit.dart';
+
+part 'user_rest_data_source.g.dart';
+
 /// REST implementation of the user data source.
 @LazySingleton(as: UserDataSource)
-class UserRestDataSource implements UserDataSource {
-  @override
-  Future<List<UserModel>> getAllUsers() {
-    // TODO: implement getAllUsers
-    throw UnimplementedError();
-  }
+@RestApi()
+abstract class UserRestDataSource implements UserDataSource {
+  /// Creates user REST data source.
+  @factoryMethod
+  factory UserRestDataSource(
+    Dio dio, {
+    @Named("baseUrl") String baseUrl,
+  }) = _UserRestDataSource;
 
+  @GET("/users")
   @override
-  Future<UserModel> getUser({required int id}) {
-    // TODO: implement getUser
-    throw UnimplementedError();
-  }
+  Future<List<UserModel>> getAllUsers();
+
+  @GET("/users/{userId}")
+  @override
+  Future<UserModel> getUser({
+    @Path("userId") required int userId,
+  });
 }

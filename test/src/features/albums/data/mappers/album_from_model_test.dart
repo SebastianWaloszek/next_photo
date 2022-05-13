@@ -9,7 +9,7 @@ void main() {
     '$AlbumFromModel',
     () {
       test(
-        'Should map album model to entity',
+        'should map album model to entity',
         () {
           expect(
             AlbumFromModel()(_albumModel),

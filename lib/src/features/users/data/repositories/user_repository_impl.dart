@@ -35,7 +35,7 @@ class UserRepositoryImpl implements UserRepository {
   @override
   Future<Result<User>> getUser(UserId userId) async {
     try {
-      final userModel = await _dataSource.getUser(id: userId.value);
+      final userModel = await _dataSource.getUser(userId: userId.value);
       final user = UserFromModel()(userModel);
       return Result(user);
     } catch (e, s) {

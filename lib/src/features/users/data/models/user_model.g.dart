@@ -38,7 +38,7 @@ _$_AddressModel _$$_AddressModelFromJson(Map<String, dynamic> json) =>
       street: json['street'] as String,
       suite: json['suite'] as String,
       city: json['city'] as String,
-      zipCode: json['zipCode'] as String,
+      zipcode: json['zipcode'] as String,
       geo: json['geo'] == null
           ? null
           : GeoLocationModel.fromJson(json['geo'] as Map<String, dynamic>),
@@ -49,14 +49,14 @@ Map<String, dynamic> _$$_AddressModelToJson(_$_AddressModel instance) =>
       'street': instance.street,
       'suite': instance.suite,
       'city': instance.city,
-      'zipCode': instance.zipCode,
+      'zipcode': instance.zipcode,
       'geo': instance.geo,
     };
 
 _$_GeoLocationModel _$$_GeoLocationModelFromJson(Map<String, dynamic> json) =>
     _$_GeoLocationModel(
-      lat: (json['lat'] as num).toDouble(),
-      lng: (json['lng'] as num).toDouble(),
+      lat: json['lat'] as String,
+      lng: json['lng'] as String,
     );
 
 Map<String, dynamic> _$$_GeoLocationModelToJson(_$_GeoLocationModel instance) =>

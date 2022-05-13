@@ -9,7 +9,7 @@ void main() {
     '$PhotoFromModel',
     () {
       test(
-        'Should map photo model to entity',
+        'should map photo model to entity',
         () {
           expect(
             PhotoFromModel()(_photoModel),

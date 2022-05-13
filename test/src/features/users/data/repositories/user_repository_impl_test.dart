@@ -73,7 +73,7 @@ void main() {
       test(
         'should return result with user when getting user succeeds',
         () async {
-          when(() => dataSource.getUser(id: 1)).thenAnswer(
+          when(() => dataSource.getUser(userId: 1)).thenAnswer(
             (_) async => userModel1,
           );
 
@@ -92,7 +92,7 @@ void main() {
       test(
         'should return failure result when getting user fails',
         () async {
-          when(() => dataSource.getUser(id: 1)).thenThrow('Failure');
+          when(() => dataSource.getUser(userId: 1)).thenThrow('Failure');
 
           final result = await repository.getUser(userId1);
 

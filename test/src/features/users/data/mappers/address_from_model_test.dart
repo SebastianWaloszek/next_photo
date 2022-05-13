@@ -8,7 +8,7 @@ void main() {
     '$AddressFromModel',
     () {
       test(
-        'Should map address model to entity',
+        'should map address model to entity',
         () {
           expect(
             AddressFromModel()(_addressModel),
@@ -18,7 +18,7 @@ void main() {
       );
 
       test(
-        'Should map address model with geolocation to entity',
+        'should map address model with geolocation to entity',
         () {
           expect(
             AddressFromModel()(_addressModelWihGeoLocation),
@@ -34,11 +34,11 @@ const _addressModel = AddressModel(
   street: 'street',
   suite: 'suite',
   city: 'city',
-  zipCode: 'zipCode',
+  zipcode: 'zipCode',
 );
 
 final _addressModelWihGeoLocation = _addressModel.copyWith(
-  geo: const GeoLocationModel(lat: 1, lng: 1),
+  geo: const GeoLocationModel(lat: '-1', lng: '1'),
 );
 
 const _address = Address(
@@ -49,5 +49,5 @@ const _address = Address(
 );
 
 final _addressWihGeoLocation = _address.copyWith(
-  geoLocation: const GeoLocation(latitude: 1, longitude: 1),
+  geoLocation: const GeoLocation(latitude: -1, longitude: 1),
 );

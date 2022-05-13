@@ -8,7 +8,7 @@ void main() {
     '$UserFromModel',
     () {
       test(
-        'Should map user model to entity',
+        'should map user model to entity',
         () {
           expect(
             UserFromModel()(_userModel),
@@ -18,7 +18,7 @@ void main() {
       );
 
       test(
-        'Should map user model with address to entity',
+        'should map user model with address to entity',
         () {
           expect(
             UserFromModel()(_userModelWithAddress),
@@ -28,7 +28,7 @@ void main() {
       );
 
       test(
-        'Should map user model with company to entity',
+        'should map user model with company to entity',
         () {
           expect(
             UserFromModel()(_userModelWithCompany),
@@ -54,7 +54,7 @@ final _userModelWithAddress = _userModel.copyWith(
     street: 'street',
     suite: 'suite',
     city: 'city',
-    zipCode: 'zipCode',
+    zipcode: 'zipCode',
   ),
 );
 

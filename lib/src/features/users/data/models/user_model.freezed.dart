@@ -333,7 +333,7 @@ mixin _$AddressModel {
   String get street => throw _privateConstructorUsedError;
   String get suite => throw _privateConstructorUsedError;
   String get city => throw _privateConstructorUsedError;
-  String get zipCode => throw _privateConstructorUsedError;
+  String get zipcode => throw _privateConstructorUsedError;
   GeoLocationModel? get geo => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -351,7 +351,7 @@ abstract class $AddressModelCopyWith<$Res> {
       {String street,
       String suite,
       String city,
-      String zipCode,
+      String zipcode,
       GeoLocationModel? geo});
 
   $GeoLocationModelCopyWith<$Res>? get geo;
@@ -370,7 +370,7 @@ class _$AddressModelCopyWithImpl<$Res> implements $AddressModelCopyWith<$Res> {
     Object? street = freezed,
     Object? suite = freezed,
     Object? city = freezed,
-    Object? zipCode = freezed,
+    Object? zipcode = freezed,
     Object? geo = freezed,
   }) {
     return _then(_value.copyWith(
@@ -386,9 +386,9 @@ class _$AddressModelCopyWithImpl<$Res> implements $AddressModelCopyWith<$Res> {
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
               as String,
-      zipCode: zipCode == freezed
-          ? _value.zipCode
-          : zipCode // ignore: cast_nullable_to_non_nullable
+      zipcode: zipcode == freezed
+          ? _value.zipcode
+          : zipcode // ignore: cast_nullable_to_non_nullable
               as String,
       geo: geo == freezed
           ? _value.geo
@@ -420,7 +420,7 @@ abstract class _$$_AddressModelCopyWith<$Res>
       {String street,
       String suite,
       String city,
-      String zipCode,
+      String zipcode,
       GeoLocationModel? geo});
 
   @override
@@ -443,7 +443,7 @@ class __$$_AddressModelCopyWithImpl<$Res>
     Object? street = freezed,
     Object? suite = freezed,
     Object? city = freezed,
-    Object? zipCode = freezed,
+    Object? zipcode = freezed,
     Object? geo = freezed,
   }) {
     return _then(_$_AddressModel(
@@ -459,9 +459,9 @@ class __$$_AddressModelCopyWithImpl<$Res>
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
               as String,
-      zipCode: zipCode == freezed
-          ? _value.zipCode
-          : zipCode // ignore: cast_nullable_to_non_nullable
+      zipcode: zipcode == freezed
+          ? _value.zipcode
+          : zipcode // ignore: cast_nullable_to_non_nullable
               as String,
       geo: geo == freezed
           ? _value.geo
@@ -478,7 +478,7 @@ class _$_AddressModel implements _AddressModel {
       {required this.street,
       required this.suite,
       required this.city,
-      required this.zipCode,
+      required this.zipcode,
       this.geo});
 
   factory _$_AddressModel.fromJson(Map<String, dynamic> json) =>
@@ -491,13 +491,13 @@ class _$_AddressModel implements _AddressModel {
   @override
   final String city;
   @override
-  final String zipCode;
+  final String zipcode;
   @override
   final GeoLocationModel? geo;
 
   @override
   String toString() {
-    return 'AddressModel(street: $street, suite: $suite, city: $city, zipCode: $zipCode, geo: $geo)';
+    return 'AddressModel(street: $street, suite: $suite, city: $city, zipcode: $zipcode, geo: $geo)';
   }
 
   @override
@@ -508,7 +508,7 @@ class _$_AddressModel implements _AddressModel {
             const DeepCollectionEquality().equals(other.street, street) &&
             const DeepCollectionEquality().equals(other.suite, suite) &&
             const DeepCollectionEquality().equals(other.city, city) &&
-            const DeepCollectionEquality().equals(other.zipCode, zipCode) &&
+            const DeepCollectionEquality().equals(other.zipcode, zipcode) &&
             const DeepCollectionEquality().equals(other.geo, geo));
   }
 
@@ -519,7 +519,7 @@ class _$_AddressModel implements _AddressModel {
       const DeepCollectionEquality().hash(street),
       const DeepCollectionEquality().hash(suite),
       const DeepCollectionEquality().hash(city),
-      const DeepCollectionEquality().hash(zipCode),
+      const DeepCollectionEquality().hash(zipcode),
       const DeepCollectionEquality().hash(geo));
 
   @JsonKey(ignore: true)
@@ -538,7 +538,7 @@ abstract class _AddressModel implements AddressModel {
       {required final String street,
       required final String suite,
       required final String city,
-      required final String zipCode,
+      required final String zipcode,
       final GeoLocationModel? geo}) = _$_AddressModel;
 
   factory _AddressModel.fromJson(Map<String, dynamic> json) =
@@ -551,7 +551,7 @@ abstract class _AddressModel implements AddressModel {
   @override
   String get city => throw _privateConstructorUsedError;
   @override
-  String get zipCode => throw _privateConstructorUsedError;
+  String get zipcode => throw _privateConstructorUsedError;
   @override
   GeoLocationModel? get geo => throw _privateConstructorUsedError;
   @override
@@ -566,8 +566,8 @@ GeoLocationModel _$GeoLocationModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$GeoLocationModel {
-  double get lat => throw _privateConstructorUsedError;
-  double get lng => throw _privateConstructorUsedError;
+  String get lat => throw _privateConstructorUsedError;
+  String get lng => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -580,7 +580,7 @@ abstract class $GeoLocationModelCopyWith<$Res> {
   factory $GeoLocationModelCopyWith(
           GeoLocationModel value, $Res Function(GeoLocationModel) then) =
       _$GeoLocationModelCopyWithImpl<$Res>;
-  $Res call({double lat, double lng});
+  $Res call({String lat, String lng});
 }
 
 /// @nodoc
@@ -601,11 +601,11 @@ class _$GeoLocationModelCopyWithImpl<$Res>
       lat: lat == freezed
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
-              as double,
+              as String,
       lng: lng == freezed
           ? _value.lng
           : lng // ignore: cast_nullable_to_non_nullable
-              as double,
+              as String,
     ));
   }
 }
@@ -617,7 +617,7 @@ abstract class _$$_GeoLocationModelCopyWith<$Res>
           _$_GeoLocationModel value, $Res Function(_$_GeoLocationModel) then) =
       __$$_GeoLocationModelCopyWithImpl<$Res>;
   @override
-  $Res call({double lat, double lng});
+  $Res call({String lat, String lng});
 }
 
 /// @nodoc
@@ -640,11 +640,11 @@ class __$$_GeoLocationModelCopyWithImpl<$Res>
       lat: lat == freezed
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
-              as double,
+              as String,
       lng: lng == freezed
           ? _value.lng
           : lng // ignore: cast_nullable_to_non_nullable
-              as double,
+              as String,
     ));
   }
 }
@@ -658,9 +658,9 @@ class _$_GeoLocationModel implements _GeoLocationModel {
       _$$_GeoLocationModelFromJson(json);
 
   @override
-  final double lat;
+  final String lat;
   @override
-  final double lng;
+  final String lng;
 
   @override
   String toString() {
@@ -696,16 +696,16 @@ class _$_GeoLocationModel implements _GeoLocationModel {
 
 abstract class _GeoLocationModel implements GeoLocationModel {
   const factory _GeoLocationModel(
-      {required final double lat,
-      required final double lng}) = _$_GeoLocationModel;
+      {required final String lat,
+      required final String lng}) = _$_GeoLocationModel;
 
   factory _GeoLocationModel.fromJson(Map<String, dynamic> json) =
       _$_GeoLocationModel.fromJson;
 
   @override
-  double get lat => throw _privateConstructorUsedError;
+  String get lat => throw _privateConstructorUsedError;
   @override
-  double get lng => throw _privateConstructorUsedError;
+  String get lng => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_GeoLocationModelCopyWith<_$_GeoLocationModel> get copyWith =>

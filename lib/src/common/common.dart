@@ -2,6 +2,7 @@
 
 library common;
 
+export 'data/http/app_http_client.dart';
 export 'presentation/localization/localization.dart';
 export 'presentation/theme/app_colors.dart';
 export 'presentation/theme/app_dimens.dart';

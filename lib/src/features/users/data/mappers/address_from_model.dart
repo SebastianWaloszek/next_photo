@@ -1,4 +1,5 @@
 import 'package:next_blog/src/base/data/mappers/mapper.dart';
+import 'package:next_blog/src/features/users/data/mappers/geo_location_from_model.dart';
 import 'package:next_blog/src/features/users/data/models/user_model.dart';
 import 'package:next_blog/src/features/users/domain/entities/user.dart';
 
@@ -10,12 +11,9 @@ class AddressFromModel implements Mapper<AddressModel, Address> {
       street: addressModel.street,
       suite: addressModel.suite,
       city: addressModel.city,
-      zipCode: addressModel.zipCode,
+      zipCode: addressModel.zipcode,
       geoLocation: addressModel.geo != null
-          ? GeoLocation(
-              longitude: addressModel.geo!.lng,
-              latitude: addressModel.geo!.lat,
-            )
+          ? GeoLocationFromModel()(addressModel.geo!)
           : null,
     );
   }

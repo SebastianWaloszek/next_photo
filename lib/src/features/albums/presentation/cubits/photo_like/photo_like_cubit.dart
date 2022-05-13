@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:next_blog/src/base/domain/entities/result.dart';
 import 'package:next_blog/src/features/albums/domain/entities/photo.dart';
 import 'package:next_blog/src/features/albums/domain/use_cases/set_photo_like.dart';
@@ -8,6 +9,7 @@ part 'photo_like_cubit.freezed.dart';
 part 'photo_like_state.dart';
 
 /// The cubit for keeping the state of the process of liking a [Photo] object.
+@injectable
 class PhotoLikeCubit extends Cubit<PhotoLikeState> {
   /// Creates the cubit.
   PhotoLikeCubit({

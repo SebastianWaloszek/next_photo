@@ -8,7 +8,7 @@ void main() {
     '$CompanyFromModel',
     () {
       test(
-        'Should map company model to entity',
+        'should map company model to entity',
         () {
           expect(
             CompanyFromModel()(_companyModel),

@@ -6,5 +6,5 @@ abstract class UserDataSource {
   Future<List<UserModel>> getAllUsers();
 
   /// Returns a single user model.
-  Future<UserModel> getUser({required int id});
+  Future<UserModel> getUser({required int userId});
 }

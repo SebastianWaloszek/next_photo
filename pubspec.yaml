@@ -21,6 +21,7 @@ dependencies:
   intl: ^0.17.0
   json_annotation: ^4.5.0
   logger: ^1.1.0
+  retrofit: ^3.0.1+1
   shared_preferences: ^2.0.15
 
 dev_dependencies:
@@ -38,6 +39,7 @@ dev_dependencies:
   json_serializable: ^6.2.0
   lint: ^1.8.2
   mocktail: 0.3.0
+  retrofit_generator: ^4.0.1
 
 dependency_overrides:
   analyzer: ^3.0.0

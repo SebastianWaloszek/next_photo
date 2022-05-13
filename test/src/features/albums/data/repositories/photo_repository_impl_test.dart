@@ -2,7 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:logger/logger.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:next_blog/src/features/albums/data/repositories/photo_repository_impl.dart';
-import 'package:next_blog/src/features/albums/data/sources/photo_data_source.dart';
+import 'package:next_blog/src/features/albums/data/sources/photo/photo_data_source.dart';
 import 'package:next_blog/src/features/albums/data/storages/photo_like_data_storage.dart';
 import 'package:next_blog/src/features/albums/domain/repositories/photo_repository.dart';
 
