@@ -40,7 +40,4 @@ abstract class StreamUseCaseWithoutParams<T> {
 }
 
 /// The interface for use case parameters.
-abstract class Params extends Equatable {
-  @override
-  bool get stringify => true;
-}
+abstract class Params extends Equatable {}

@@ -23,8 +23,8 @@ class UserRepositoryImpl implements UserRepository {
   @override
   Future<Result<List<User>>> getAllUsers() async {
     try {
-      final usersModels = await _dataSource.getAllUsers();
-      final users = usersModels.map<User>(UserFromModel()).toList();
+      final userModels = await _dataSource.getAllUsers();
+      final users = userModels.map<User>(UserFromModel()).toList();
       return Result(users);
     } catch (e, s) {
       _logger.e('Getting all users has failed!', e, s);

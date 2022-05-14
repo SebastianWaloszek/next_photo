@@ -1,5 +1,6 @@
 import 'package:logger/logger.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:next_blog/src/common/data/http/app_http_client.dart';
 import 'package:next_blog/src/features/albums/data/sources/album/album_data_source.dart';
 import 'package:next_blog/src/features/albums/data/sources/photo/photo_data_source.dart';
 import 'package:next_blog/src/features/albums/data/storages/photo_like_data_storage.dart';
@@ -21,6 +22,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 class LoggerMock extends Mock implements Logger {}
 
 class SharedPreferencesMock extends Mock implements SharedPreferences {}
+
+class AppHttpClientMock extends Mock implements AppHttpClient {}
 
 class UserDataSourceMock extends Mock implements UserDataSource {}
 

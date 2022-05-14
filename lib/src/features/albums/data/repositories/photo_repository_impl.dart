@@ -29,10 +29,10 @@ class PhotoRepositoryImpl implements PhotoRepository {
   @override
   Future<Result<List<Photo>>> getAlbumPhotos(AlbumId albumId) async {
     try {
-      final photosModels = await _dataSource.getAlbumPhotos(
+      final photoModels = await _dataSource.getAlbumPhotos(
         albumId: albumId.value,
       );
-      final photos = await _mapPhotosFromModels(photosModels);
+      final photos = await _mapPhotosFromModels(photoModels);
 
       return Result(photos);
     } catch (e, s) {
@@ -45,8 +45,8 @@ class PhotoRepositoryImpl implements PhotoRepository {
   @override
   Future<Result<List<Photo>>> getAllPhotos() async {
     try {
-      final photosModels = await _dataSource.getAllPhotos();
-      final photos = await _mapPhotosFromModels(photosModels);
+      final photoModels = await _dataSource.getAllPhotos();
+      final photos = await _mapPhotosFromModels(photoModels);
 
       return Result(photos);
     } catch (e, s) {

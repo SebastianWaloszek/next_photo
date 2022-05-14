@@ -24,8 +24,8 @@ class AlbumRepositoryImpl implements AlbumRepository {
   @override
   Future<Result<List<Album>>> getAllAlbums() async {
     try {
-      final albumsModels = await _dataSource.getAllAlbums();
-      final albums = albumsModels.map<Album>(AlbumFromModel()).toList();
+      final albumModels = await _dataSource.getAllAlbums();
+      final albums = albumModels.map<Album>(AlbumFromModel()).toList();
       return Result(albums);
     } catch (e, s) {
       _logger.e('Getting all albums has failed!', e, s);
@@ -48,10 +48,10 @@ class AlbumRepositoryImpl implements AlbumRepository {
   @override
   Future<Result<List<Album>>> getUserAlbums(UserId userId) async {
     try {
-      final albumsModels = await _dataSource.getUserAlbums(
+      final albumModels = await _dataSource.getUserAlbums(
         userId: userId.value,
       );
-      final albums = albumsModels.map<Album>(AlbumFromModel()).toList();
+      final albums = albumModels.map<Album>(AlbumFromModel()).toList();
       return Result(albums);
     } catch (e, s) {
       _logger.e('Getting albums for user ${userId.value} has failed!', e, s);

@@ -5,7 +5,7 @@ abstract class PhotoDataSource {
   /// Returns list with all photo models of a given album.
   Future<List<PhotoModel>> getAlbumPhotos({required int albumId});
 
-  /// Returns list with all available photos models.
+  /// Returns list with all available photo models.
   Future<List<PhotoModel>> getAllPhotos();
 
   /// Returns a single photo model.

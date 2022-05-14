@@ -33,7 +33,7 @@ void main() {
         'should return result with albums when getting all albums succeeds',
         () async {
           when(() => dataSource.getAllAlbums()).thenAnswer(
-            (_) async => albumsModels,
+            (_) async => albumModels,
           );
 
           final result = await repository.getAllAlbums();
@@ -123,7 +123,7 @@ void main() {
           when(
             () => dataSource.getUserAlbums(userId: userId1.value),
           ).thenAnswer(
-            (_) async => albumsModels,
+            (_) async => albumModels,
           );
 
           final result = await repository.getUserAlbums(userId1);

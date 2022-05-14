@@ -4,12 +4,6 @@ import 'package:flutter/material.dart';
 ///
 /// Creates the default Flutter counter app.
 class ExampleScreen extends StatefulWidget {
-  /// Creates the screen with a specified [title] for app bar.
-  const ExampleScreen({
-    Key? key,
-    required this.title,
-  }) : super(key: key);
-
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
   // how it looks.
@@ -18,9 +12,6 @@ class ExampleScreen extends StatefulWidget {
   // case the title) provided by the parent (in this case the App widget) and
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
-
-  /// The title of the app bar.
-  final String title;
 
   @override
   _ExampleScreenState createState() => _ExampleScreenState();
@@ -52,7 +43,7 @@ class _ExampleScreenState extends State<ExampleScreen> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: const Text('Home'),
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it

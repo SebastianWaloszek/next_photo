@@ -29,3 +29,12 @@ flutter pub global run index_generator
 ```
 
 Right now the libraries `app` and `di` don't use code generation as they are small and usually don't change in terms of included files.
+
+## Code coverage
+To generate code coverage run:
+```
+dart pub global activate remove_from_coverage
+flutter test --coverage 
+remove_from_coverage -f coverage/lcov.info -r '.g.dart|.freezed.dart$|\bgenerated\b'
+genhtml coverage/lcov.info -o coverage/html
+```

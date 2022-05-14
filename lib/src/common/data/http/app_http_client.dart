@@ -6,10 +6,10 @@ class AppHttpClient with DioMixin implements Dio {
   /// Creates HTTP client.
   AppHttpClient({
     BaseOptions? options,
-    List<Interceptor>? interceptors,
+    List<Interceptor> interceptors = const [],
   }) {
     httpClientAdapter = DefaultHttpClientAdapter();
     this.options = options ?? BaseOptions();
-    this.interceptors.addAll([...interceptors ?? []]);
+    this.interceptors.addAll(interceptors);
   }
 }

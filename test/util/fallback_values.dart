@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_implementing_value_types
 
+import 'package:dio/dio.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:next_blog/src/features/albums/domain/use_cases/get_album.dart';
 import 'package:next_blog/src/features/albums/domain/use_cases/get_album_photos.dart';
@@ -9,6 +10,7 @@ import 'package:next_blog/src/features/albums/domain/use_cases/set_photo_like.da
 import 'package:next_blog/src/features/users/domain/use_cases/get_user.dart';
 
 void registerAllFallbackValues() {
+  registerFallbackValue(_RequestOptionsFake());
   registerFallbackValue(_GetUserParamsFake());
   registerFallbackValue(_GetAlbumParams());
   registerFallbackValue(_GetUserAlbumsParamsFake());
@@ -16,6 +18,8 @@ void registerAllFallbackValues() {
   registerFallbackValue(_GetAlbumPhotosParamsFake());
   registerFallbackValue(_SetPhotoLikeParamsFake());
 }
+
+class _RequestOptionsFake extends Fake implements RequestOptions {}
 
 class _GetUserParamsFake extends Fake implements GetUserParams {}
 

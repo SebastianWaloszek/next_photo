@@ -3,5 +3,5 @@ import 'package:next_blog/src/features/example/presentation/screens/example_scre
 
 /// The application's top-level routing table.
 final Map<String, WidgetBuilder> appNavigationRoutes = <String, WidgetBuilder>{
-  '/': (BuildContext context) => const ExampleScreen(title: 'Home')
+  '/': (BuildContext context) => ExampleScreen()
 };

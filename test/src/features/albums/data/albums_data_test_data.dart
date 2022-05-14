@@ -13,7 +13,7 @@ const albumModel2 = AlbumModel(
   title: 'sunt qui excepturi placeat culpa',
 );
 
-final albumsModels = [albumModel1, albumModel2];
+final albumModels = [albumModel1, albumModel2];
 
 const photoModel1 = PhotoModel(
   id: 1,
@@ -31,4 +31,4 @@ const photoModel2 = PhotoModel(
   thumbnailUrl: 'https://via.placeholder.com/150/771796',
 );
 
-final photosModels = [photoModel1, photoModel2];
+final photoModels = [photoModel1, photoModel2];

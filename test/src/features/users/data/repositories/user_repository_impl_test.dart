@@ -32,7 +32,7 @@ void main() {
         'should return result with users when getting all users succeeds',
         () async {
           when(() => dataSource.getAllUsers()).thenAnswer(
-            (_) async => usersModels,
+            (_) async => userModels,
           );
 
           final result = await repository.getAllUsers();

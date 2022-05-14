@@ -14,4 +14,4 @@ const userModel2 = UserModel(
   email: 'shanna@melissa.tv',
 );
 
-final usersModels = [userModel1, userModel2];
+final userModels = [userModel1, userModel2];

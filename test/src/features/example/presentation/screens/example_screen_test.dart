@@ -17,10 +17,8 @@ void main() {
     (WidgetTester tester) async {
       // Build our app and trigger a frame.
       await tester.pumpWidget(
-        const LocalizedMaterialApp(
-          child: ExampleScreen(
-            title: 'Home',
-          ),
+        LocalizedMaterialApp(
+          child: ExampleScreen(),
         ),
       );
 

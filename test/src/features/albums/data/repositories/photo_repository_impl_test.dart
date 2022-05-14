@@ -47,7 +47,7 @@ void main() {
         'should return result with photos when getting all photos succeeds',
         () async {
           when(() => dataSource.getAllPhotos()).thenAnswer(
-            (_) async => photosModels,
+            (_) async => photoModels,
           );
 
           final result = await repository.getAllPhotos();
@@ -66,7 +66,7 @@ void main() {
         'should return result with liked photos when getting all photos succeeds',
         () async {
           when(() => dataSource.getAllPhotos()).thenAnswer(
-            (_) async => photosModels,
+            (_) async => photoModels,
           );
 
           final result = await repository.getAllPhotos();
@@ -77,6 +77,31 @@ void main() {
               verifyZeroInteractions(logger);
             },
             failure: (failure) => throw failure,
+          );
+        },
+      );
+
+      test(
+        'should return result with failure when getting photo fails',
+        () async {
+          when(
+            () => dataSource.getAllPhotos(),
+          ).thenThrow('Failure');
+
+          final result = await repository.getAllPhotos();
+
+          result.when(
+            (value) => throw value,
+            failure: (failure) {
+              verify(
+                () => logger.e(
+                  'Getting all photos has failed!',
+                  'Failure',
+                  any(),
+                ),
+              ).called(1);
+              verifyNoMoreInteractions(logger);
+            },
           );
         },
       );
@@ -133,7 +158,7 @@ void main() {
           when(
             () => dataSource.getAlbumPhotos(albumId: albumId1.value),
           ).thenAnswer(
-            (_) async => photosModels,
+            (_) async => photoModels,
           );
 
           final result = await repository.getAlbumPhotos(albumId1);
@@ -182,7 +207,7 @@ void main() {
               like: true,
             ),
           ).thenAnswer(
-            (_) async => photosModels,
+            (_) async => photoModels,
           );
 
           final result = await repository.setPhotoLike(photoId1, like: true);
