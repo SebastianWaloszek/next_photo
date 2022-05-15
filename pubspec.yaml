@@ -52,6 +52,9 @@ flutter:
     - assets/images/
 
   fonts:
+    - family: AppIcons
+      fonts:
+        - asset: assets/fonts/AppIcons.ttf
     - family: Roboto
       fonts:
         - asset: assets/fonts/Roboto-Thin.ttf
