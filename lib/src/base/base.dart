@@ -6,4 +6,4 @@ export 'data/mappers/mapper.dart';
 export 'domain/entities/id.dart';
 export 'domain/entities/result.dart';
 export 'domain/use_cases/use_case.dart';
-export 'presentation/widget/provider/injected_bloc_provider.dart';
+export 'presentation/widgets/provider/injected_bloc_provider.dart';

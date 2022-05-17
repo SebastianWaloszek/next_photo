@@ -14,6 +14,7 @@ import 'package:next_blog/src/main_dev.dart' as app;
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
+  // TODO: Replace with proper tests.
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     app.main();

@@ -27,7 +27,9 @@ class PhotosCubit extends Cubit<PhotosState> {
   /// Loads the list of photos for a given [albumId].
   Future<void> getAlbumPhotos(AlbumId albumId) async {
     emit(
-      const PhotosState.inProgress(),
+      PhotosState.inProgress(
+        currentPhotos: state.whenOrNull(success: (photos) => photos),
+      ),
     );
 
     final result = await _getAlbumPhotos(
@@ -45,7 +47,9 @@ class PhotosCubit extends Cubit<PhotosState> {
   /// Loads all available photos.
   Future<void> getAllPhotos() async {
     emit(
-      const PhotosState.inProgress(),
+      PhotosState.inProgress(
+        currentPhotos: state.whenOrNull(success: (photos) => photos),
+      ),
     );
 
     final result = await _getAllPhotos();

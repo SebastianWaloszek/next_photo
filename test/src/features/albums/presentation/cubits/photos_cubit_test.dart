@@ -65,6 +65,26 @@ void main() {
       );
 
       blocTest<PhotosCubit, PhotosState>(
+        'should emit in progress (with current photos) & success state'
+        ' when getting new all photos succeeds',
+        build: () {
+          whenGetAllPhotos(Result(photos));
+          return cubit;
+        },
+        act: (cubit) async {
+          await cubit.getAllPhotos();
+          return cubit.getAllPhotos();
+        },
+        verify: (_) => verify(getAllPhotos).called(2),
+        expect: () => [
+          const PhotosState.inProgress(),
+          PhotosState.success(photos),
+          PhotosState.inProgress(currentPhotos: photos),
+          PhotosState.success(photos),
+        ],
+      );
+
+      blocTest<PhotosCubit, PhotosState>(
         'should emit in progress & failure state when getting all photos fails',
         build: () {
           whenGetAllPhotos(const Result.failure(failure));
@@ -90,6 +110,28 @@ void main() {
         ).called(1),
         expect: () => [
           const PhotosState.inProgress(),
+          PhotosState.success(photos),
+        ],
+      );
+
+      blocTest<PhotosCubit, PhotosState>(
+        'should emit in progress (with current photos) & success state '
+        'when getting new album photos succeeds',
+        build: () {
+          whenGetAlbumPhotos(Result(photos));
+          return cubit;
+        },
+        act: (cubit) async {
+          await cubit.getAlbumPhotos(albumId1);
+          return cubit.getAlbumPhotos(albumId1);
+        },
+        verify: (_) => verify(
+          () => getAlbumPhotos(GetAlbumPhotosParams(albumId: albumId1)),
+        ).called(2),
+        expect: () => [
+          const PhotosState.inProgress(),
+          PhotosState.success(photos),
+          PhotosState.inProgress(currentPhotos: photos),
           PhotosState.success(photos),
         ],
       );

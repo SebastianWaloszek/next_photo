@@ -19,7 +19,7 @@ mixin _$PhotosState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() inProgress,
+    required TResult Function(List<Photo>? currentPhotos) inProgress,
     required TResult Function(List<Photo> photos) success,
     required TResult Function(Failure failure) failure,
   }) =>
@@ -27,7 +27,7 @@ mixin _$PhotosState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? inProgress,
+    TResult Function(List<Photo>? currentPhotos)? inProgress,
     TResult Function(List<Photo> photos)? success,
     TResult Function(Failure failure)? failure,
   }) =>
@@ -35,7 +35,7 @@ mixin _$PhotosState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? inProgress,
+    TResult Function(List<Photo>? currentPhotos)? inProgress,
     TResult Function(List<Photo> photos)? success,
     TResult Function(Failure failure)? failure,
     required TResult orElse(),
@@ -126,7 +126,7 @@ class _$_PhotosInitialState implements _PhotosInitialState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() inProgress,
+    required TResult Function(List<Photo>? currentPhotos) inProgress,
     required TResult Function(List<Photo> photos) success,
     required TResult Function(Failure failure) failure,
   }) {
@@ -137,7 +137,7 @@ class _$_PhotosInitialState implements _PhotosInitialState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? inProgress,
+    TResult Function(List<Photo>? currentPhotos)? inProgress,
     TResult Function(List<Photo> photos)? success,
     TResult Function(Failure failure)? failure,
   }) {
@@ -148,7 +148,7 @@ class _$_PhotosInitialState implements _PhotosInitialState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? inProgress,
+    TResult Function(List<Photo>? currentPhotos)? inProgress,
     TResult Function(List<Photo> photos)? success,
     TResult Function(Failure failure)? failure,
     required TResult orElse(),
@@ -206,6 +206,7 @@ abstract class _$$_PhotosInProgressStateCopyWith<$Res> {
   factory _$$_PhotosInProgressStateCopyWith(_$_PhotosInProgressState value,
           $Res Function(_$_PhotosInProgressState) then) =
       __$$_PhotosInProgressStateCopyWithImpl<$Res>;
+  $Res call({List<Photo>? currentPhotos});
 }
 
 /// @nodoc
@@ -219,60 +220,92 @@ class __$$_PhotosInProgressStateCopyWithImpl<$Res>
   @override
   _$_PhotosInProgressState get _value =>
       super._value as _$_PhotosInProgressState;
+
+  @override
+  $Res call({
+    Object? currentPhotos = freezed,
+  }) {
+    return _then(_$_PhotosInProgressState(
+      currentPhotos: currentPhotos == freezed
+          ? _value._currentPhotos
+          : currentPhotos // ignore: cast_nullable_to_non_nullable
+              as List<Photo>?,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_PhotosInProgressState implements _PhotosInProgressState {
-  const _$_PhotosInProgressState();
+  const _$_PhotosInProgressState({final List<Photo>? currentPhotos})
+      : _currentPhotos = currentPhotos;
+
+  final List<Photo>? _currentPhotos;
+  @override
+  List<Photo>? get currentPhotos {
+    final value = _currentPhotos;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'PhotosState.inProgress()';
+    return 'PhotosState.inProgress(currentPhotos: $currentPhotos)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_PhotosInProgressState);
+        (other.runtimeType == runtimeType &&
+            other is _$_PhotosInProgressState &&
+            const DeepCollectionEquality()
+                .equals(other._currentPhotos, _currentPhotos));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_currentPhotos));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_PhotosInProgressStateCopyWith<_$_PhotosInProgressState> get copyWith =>
+      __$$_PhotosInProgressStateCopyWithImpl<_$_PhotosInProgressState>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() inProgress,
+    required TResult Function(List<Photo>? currentPhotos) inProgress,
     required TResult Function(List<Photo> photos) success,
     required TResult Function(Failure failure) failure,
   }) {
-    return inProgress();
+    return inProgress(currentPhotos);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? inProgress,
+    TResult Function(List<Photo>? currentPhotos)? inProgress,
     TResult Function(List<Photo> photos)? success,
     TResult Function(Failure failure)? failure,
   }) {
-    return inProgress?.call();
+    return inProgress?.call(currentPhotos);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? inProgress,
+    TResult Function(List<Photo>? currentPhotos)? inProgress,
     TResult Function(List<Photo> photos)? success,
     TResult Function(Failure failure)? failure,
     required TResult orElse(),
   }) {
     if (inProgress != null) {
-      return inProgress();
+      return inProgress(currentPhotos);
     }
     return orElse();
   }
@@ -316,7 +349,13 @@ class _$_PhotosInProgressState implements _PhotosInProgressState {
 }
 
 abstract class _PhotosInProgressState implements PhotosState {
-  const factory _PhotosInProgressState() = _$_PhotosInProgressState;
+  const factory _PhotosInProgressState({final List<Photo>? currentPhotos}) =
+      _$_PhotosInProgressState;
+
+  List<Photo>? get currentPhotos => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$_PhotosInProgressStateCopyWith<_$_PhotosInProgressState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -390,7 +429,7 @@ class _$_PhotosSuccessState implements _PhotosSuccessState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() inProgress,
+    required TResult Function(List<Photo>? currentPhotos) inProgress,
     required TResult Function(List<Photo> photos) success,
     required TResult Function(Failure failure) failure,
   }) {
@@ -401,7 +440,7 @@ class _$_PhotosSuccessState implements _PhotosSuccessState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? inProgress,
+    TResult Function(List<Photo>? currentPhotos)? inProgress,
     TResult Function(List<Photo> photos)? success,
     TResult Function(Failure failure)? failure,
   }) {
@@ -412,7 +451,7 @@ class _$_PhotosSuccessState implements _PhotosSuccessState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? inProgress,
+    TResult Function(List<Photo>? currentPhotos)? inProgress,
     TResult Function(List<Photo> photos)? success,
     TResult Function(Failure failure)? failure,
     required TResult orElse(),
@@ -547,7 +586,7 @@ class _$_PhotosFailureState implements _PhotosFailureState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() inProgress,
+    required TResult Function(List<Photo>? currentPhotos) inProgress,
     required TResult Function(List<Photo> photos) success,
     required TResult Function(Failure failure) failure,
   }) {
@@ -558,7 +597,7 @@ class _$_PhotosFailureState implements _PhotosFailureState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? inProgress,
+    TResult Function(List<Photo>? currentPhotos)? inProgress,
     TResult Function(List<Photo> photos)? success,
     TResult Function(Failure failure)? failure,
   }) {
@@ -569,7 +608,7 @@ class _$_PhotosFailureState implements _PhotosFailureState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? inProgress,
+    TResult Function(List<Photo>? currentPhotos)? inProgress,
     TResult Function(List<Photo> photos)? success,
     TResult Function(Failure failure)? failure,
     required TResult orElse(),

@@ -20,9 +20,11 @@ dependencies:
   get_it: ^7.2.0
   intl: ^0.17.0
   json_annotation: ^4.5.0
+  like_button: ^2.0.4
   logger: ^1.1.0
   retrofit: ^3.0.1+1
   shared_preferences: ^2.0.15
+  timeago: ^3.2.2
 
 dev_dependencies:
   bloc_test: ^9.0.3
@@ -55,6 +57,9 @@ flutter:
     - family: AppIcons
       fonts:
         - asset: assets/fonts/AppIcons.ttf
+    - family: Billabong
+      fonts:
+        - asset: assets/fonts/Billabong.ttf
     - family: Roboto
       fonts:
         - asset: assets/fonts/Roboto-Thin.ttf

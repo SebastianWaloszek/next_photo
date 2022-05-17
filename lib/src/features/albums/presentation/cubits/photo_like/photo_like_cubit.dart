@@ -22,7 +22,9 @@ class PhotoLikeCubit extends Cubit<PhotoLikeState> {
   final SetPhotoLike _setPhotoLike;
 
   /// Updates the given photo's like status.
-  Future<void> setPhotoLike(
+  ///
+  /// Returns whether the photo is liked or not.
+  Future<bool> setPhotoLike(
     PhotoId photoId, {
     required bool like,
   }) async {
@@ -42,6 +44,11 @@ class PhotoLikeCubit extends Cubit<PhotoLikeState> {
         (success) => PhotoLikeState.success(like: like),
         failure: PhotoLikeState.failure,
       ),
+    );
+
+    return result.when(
+      (result) => like,
+      failure: (_) => !like,
     );
   }
 }

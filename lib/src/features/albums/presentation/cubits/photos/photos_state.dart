@@ -7,7 +7,8 @@ class PhotosState with _$PhotosState {
   const factory PhotosState.initial() = _PhotosInitialState;
 
   /// Creates loading cubit state for photos.
-  const factory PhotosState.inProgress() = _PhotosInProgressState;
+  const factory PhotosState.inProgress({List<Photo>? currentPhotos}) =
+      _PhotosInProgressState;
 
   /// Creates loading succeeded cubit state for photos.
   const factory PhotosState.success(List<Photo> photos) = _PhotosSuccessState;

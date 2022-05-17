@@ -49,6 +49,106 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `This feature was not implemented yet`
+  String get featureNotImplemented {
+    return Intl.message(
+      'This feature was not implemented yet',
+      name: 'featureNotImplemented',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get home {
+    return Intl.message(
+      'Home',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get search {
+    return Intl.message(
+      'Search',
+      name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reels`
+  String get reels {
+    return Intl.message(
+      'Reels',
+      name: 'reels',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Store`
+  String get store {
+    return Intl.message(
+      'Store',
+      name: 'store',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message(
+      'Profile',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Liked by {userName} and {othersCount} others`
+  String likedBy(Object userName, Object othersCount) {
+    return Intl.message(
+      'Liked by $userName and $othersCount others',
+      name: 'likedBy',
+      desc: '',
+      args: [userName, othersCount],
+    );
+  }
+
+  /// `View all {count} comments`
+  String viewAllComments(Object count) {
+    return Intl.message(
+      'View all $count comments',
+      name: 'viewAllComments',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `Add a comment...`
+  String get addAComment {
+    return Intl.message(
+      'Add a comment...',
+      name: 'addAComment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An error occurred please again later.`
+  String get anErrorOccurred {
+    return Intl.message(
+      'An error occurred please again later.',
+      name: 'anErrorOccurred',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

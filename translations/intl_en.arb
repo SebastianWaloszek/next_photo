@@ -1,1 +1,12 @@
-{}
+{
+  "featureNotImplemented": "This feature was not implemented yet",
+  "home": "Home",
+  "search":"Search",
+  "reels": "Reels",
+  "store":"Store",
+  "profile": "Profile",
+  "likedBy": "Liked by {userName} and {othersCount} others",
+  "viewAllComments": "View all {count} comments",
+  "addAComment": "Add a comment...",
+  "anErrorOccurred": "An error occurred please again later."
+}

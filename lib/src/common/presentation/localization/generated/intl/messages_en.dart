@@ -20,6 +20,24 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(userName, othersCount) =>
+      "Liked by ${userName} and ${othersCount} others";
+
+  static String m1(count) => "View all ${count} comments";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "addAComment": MessageLookupByLibrary.simpleMessage("Add a comment..."),
+        "anErrorOccurred": MessageLookupByLibrary.simpleMessage(
+            "An error occurred please again later."),
+        "featureNotImplemented": MessageLookupByLibrary.simpleMessage(
+            "This feature was not implemented yet"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "likedBy": m0,
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+        "reels": MessageLookupByLibrary.simpleMessage("Reels"),
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
+        "store": MessageLookupByLibrary.simpleMessage("Store"),
+        "viewAllComments": m1
+      };
 }

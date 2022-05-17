@@ -13,6 +13,7 @@ class LightThemeColor {
   static Color get primaryAccent => const Color(0xFF4192EF);
   static Color get secondaryAccent => const Color(0xFFD52865);
   static Color get tertiaryAccent => const Color(0xFFF7B55A);
+  static Color get like => const Color(0xFFE55960);
   static Color get background => const Color(0xFFFFFFFF);
 }
 
@@ -25,5 +26,6 @@ class DarkThemeColor {
   static Color get primaryAccent => const Color(0xFF4192EF);
   static Color get secondaryAccent => const Color(0xFFD52865);
   static Color get tertiaryAccent => const Color(0xFFF7B55A);
+  static Color get like => const Color(0xFFE55960);
   static Color get background => const Color(0xFF000000);
 }
