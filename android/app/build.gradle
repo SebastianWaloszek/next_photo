@@ -34,7 +34,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.waloszek.next_blog"
+        applicationId "com.waloszek.next_photo"
         minSdkVersion 16
         targetSdkVersion 31
         versionCode flutterVersionCode.toInteger()
@@ -54,16 +54,16 @@ android {
         development {
             dimension "default"
             versionNameSuffix "-dev"
-            applicationId "com.waloszek.next_blog.dev"
+            applicationId "com.waloszek.next_photo.dev"
         }
         stage {
             dimension "default"
             versionNameSuffix "-stage"
-            applicationId "com.waloszek.next_blog.stage"
+            applicationId "com.waloszek.next_photo.stage"
         }
         production {
             dimension "default"
-            applicationId "com.waloszek.next_blog"
+            applicationId "com.waloszek.next_photo"
         }
     }
 }

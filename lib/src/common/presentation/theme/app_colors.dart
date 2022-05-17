@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:next_blog/src/common/presentation/theme/color/theme_color.dart';
-import 'package:next_blog/src/common/presentation/theme/color/themed_color.dart';
+import 'package:next_photo/src/common/presentation/theme/color/theme_color.dart';
+import 'package:next_photo/src/common/presentation/theme/color/themed_color.dart';
 
 // ignore_for_file: public_member_api_docs
 
@@ -26,6 +26,16 @@ class AppColors {
   static Color secondaryAccent(BuildContext context) => ThemedColor(
         light: LightThemeColor.secondaryAccent,
         dark: DarkThemeColor.secondaryAccent,
+      ).getColor(context);
+
+  static Color tertiaryAccent(BuildContext context) => ThemedColor(
+        light: LightThemeColor.secondaryAccent,
+        dark: DarkThemeColor.secondaryAccent,
+      ).getColor(context);
+
+  static Color like(BuildContext context) => ThemedColor(
+        light: LightThemeColor.like,
+        dark: DarkThemeColor.like,
       ).getColor(context);
 
   static Color background(BuildContext context) => ThemedColor(

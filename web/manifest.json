@@ -1,6 +1,6 @@
 {
-    "name": "NextBlog",
-    "short_name": "NextBlog",
+    "name": "NextPhoto",
+    "short_name": "NextPhoto",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

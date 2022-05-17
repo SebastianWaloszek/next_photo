@@ -1,26 +1,33 @@
-name: next_blog
+name: next_photo
 description: A Flutter blog application.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 1.0.0+1
+version: 0.0.1+1
 
 environment:
-  sdk: '>=2.16.2 <3.0.0'
+  sdk: '>=2.17.0 <3.0.0'
 
 dependencies:
   cupertino_icons: ^1.0.4
   equatable: ^2.0.3
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.0.1
   flutter_localizations:
     sdk: flutter
-  freezed: ^2.0.2
+  freezed: ^2.0.3
   get_it: ^7.2.0
   intl: ^0.17.0
+  json_annotation: ^4.5.0
+  like_button: ^2.0.4
   logger: ^1.1.0
+  retrofit: ^3.0.1+1
+  shared_preferences: ^2.0.15
+  timeago: ^3.2.2
 
 dev_dependencies:
+  bloc_test: ^9.0.3
   build_runner: ^2.1.10
   flutter_launcher_icons: ^0.9.2
   flutter_test:
@@ -31,8 +38,10 @@ dev_dependencies:
     sdk: flutter
   intl_generator: ^0.2.1
   intl_utils: ^2.6.1
+  json_serializable: ^6.2.0
   lint: ^1.8.2
   mocktail: 0.3.0
+  retrofit_generator: ^4.0.1
 
 dependency_overrides:
   analyzer: ^3.0.0
@@ -45,6 +54,12 @@ flutter:
     - assets/images/
 
   fonts:
+    - family: AppIcons
+      fonts:
+        - asset: assets/fonts/AppIcons.ttf
+    - family: Billabong
+      fonts:
+        - asset: assets/fonts/Billabong.ttf
     - family: Roboto
       fonts:
         - asset: assets/fonts/Roboto-Thin.ttf
@@ -86,9 +101,9 @@ index_generator:
   exclude:
     - '**.g.dart'
     - '**.freezed.dart'
-    - '**/bloc/**_event.dart'
-    - '**/bloc/**_state.dart'
-    - '**/cubit/**_state.dart'
+    - '**/blocs/**_event.dart'
+    - '**/blocs/**_state.dart'
+    - '**/cubits/**_state.dart'
   indexes:
     - path: lib/src/base
       include:

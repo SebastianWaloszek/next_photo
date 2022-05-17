@@ -8,11 +8,12 @@ import 'package:flutter/material.dart';
 class LightThemeColor {
   const LightThemeColor._();
 
-  static Color get primaryContent => const Color(0xFF222529);
-  static Color get secondaryContent => const Color(0xFFBEBDBD);
-  static Color get primaryAccent => const Color(0xFF0D47A1);
-  static Color get secondaryAccent => const Color(0xFF555555);
-  static Color get buttonContent => const Color(0xFFFFFFFF);
+  static Color get primaryContent => const Color(0xFF000000);
+  static Color get secondaryContent => const Color(0xFF686768);
+  static Color get primaryAccent => const Color(0xFF4192EF);
+  static Color get secondaryAccent => const Color(0xFFD52865);
+  static Color get tertiaryAccent => const Color(0xFFF7B55A);
+  static Color get like => const Color(0xFFE55960);
   static Color get background => const Color(0xFFFFFFFF);
 }
 
@@ -21,9 +22,10 @@ class DarkThemeColor {
   const DarkThemeColor._();
 
   static Color get primaryContent => const Color(0xFFE1E1E1);
-  static Color get secondaryContent => const Color(0xFFA5A5A5);
-  static Color get primaryAccent => const Color(0xFF0D47A1);
-  static Color get secondaryAccent => const Color(0xFF555555);
-  static Color get buttonContent => const Color(0xFFFFFFFF);
-  static Color get background => const Color(0xFF181818);
+  static Color get secondaryContent => const Color(0xFF838383);
+  static Color get primaryAccent => const Color(0xFF4192EF);
+  static Color get secondaryAccent => const Color(0xFFD52865);
+  static Color get tertiaryAccent => const Color(0xFFF7B55A);
+  static Color get like => const Color(0xFFE55960);
+  static Color get background => const Color(0xFF000000);
 }
