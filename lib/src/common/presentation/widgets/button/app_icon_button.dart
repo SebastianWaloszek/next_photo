@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:next_blog/src/common/presentation/widgets/alert/app_snack_bars.dart';
+import 'package:next_photo/src/common/presentation/widgets/alert/app_snack_bars.dart';
 
 /// An icon button with custom styling.
 class AppIconButton extends StatelessWidget {

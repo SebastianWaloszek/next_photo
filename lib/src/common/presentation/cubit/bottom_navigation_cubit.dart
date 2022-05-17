@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:injectable/injectable.dart';
-import 'package:next_blog/src/common/presentation/enum/bottom_navigation_tab.dart';
+import 'package:next_photo/src/common/presentation/enum/bottom_navigation_tab.dart';
 
 /// The cubit for keeping the state of the selected bottom navigation tab.
 @lazySingleton

@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:next_blog/src/base/domain/entities/id.dart';
-import 'package:next_blog/src/features/albums/domain/entities/album.dart';
+import 'package:next_photo/src/base/domain/entities/id.dart';
+import 'package:next_photo/src/features/albums/domain/entities/album.dart';
 
 part 'photo.freezed.dart';
 

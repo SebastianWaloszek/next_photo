@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:next_blog/src/common/presentation/localization/generated/l10n.dart';
+import 'package:next_photo/src/common/presentation/localization/generated/l10n.dart';
 
 /// The language locales that are supported by the app.
 List<Locale> supportedLocales = [

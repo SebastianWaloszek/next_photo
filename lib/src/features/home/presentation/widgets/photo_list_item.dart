@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:like_button/like_button.dart';
-import 'package:next_blog/src/base/presentation/widgets/provider/injected_bloc_provider.dart';
-import 'package:next_blog/src/common/presentation/localization/generated/l10n.dart';
-import 'package:next_blog/src/common/presentation/theme/app_colors.dart';
-import 'package:next_blog/src/common/presentation/theme/app_dimens.dart';
-import 'package:next_blog/src/common/presentation/theme/app_icons.dart';
-import 'package:next_blog/src/common/presentation/theme/app_text_styles.dart';
-import 'package:next_blog/src/common/presentation/widgets/button/app_icon_button.dart';
-import 'package:next_blog/src/features/albums/domain/entities/photo.dart';
-import 'package:next_blog/src/features/albums/presentation/cubits/photo_like/photo_like_cubit.dart';
+import 'package:next_photo/src/base/presentation/widgets/provider/injected_bloc_provider.dart';
+import 'package:next_photo/src/common/presentation/localization/generated/l10n.dart';
+import 'package:next_photo/src/common/presentation/theme/app_colors.dart';
+import 'package:next_photo/src/common/presentation/theme/app_dimens.dart';
+import 'package:next_photo/src/common/presentation/theme/app_icons.dart';
+import 'package:next_photo/src/common/presentation/theme/app_text_styles.dart';
+import 'package:next_photo/src/common/presentation/widgets/button/app_icon_button.dart';
+import 'package:next_photo/src/features/albums/domain/entities/photo.dart';
+import 'package:next_photo/src/features/albums/presentation/cubits/photo_like/photo_like_cubit.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 /// A list item for showing a photo with its details.

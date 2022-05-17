@@ -1,11 +1,11 @@
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
-import 'package:next_blog/src/base/domain/entities/result.dart';
-import 'package:next_blog/src/features/albums/data/mappers/album_from_model.dart';
-import 'package:next_blog/src/features/albums/data/sources/album/album_data_source.dart';
-import 'package:next_blog/src/features/albums/domain/entities/album.dart';
-import 'package:next_blog/src/features/albums/domain/repositories/album_repository.dart';
-import 'package:next_blog/src/features/users/domain/entities/user.dart';
+import 'package:next_photo/src/base/domain/entities/result.dart';
+import 'package:next_photo/src/features/albums/data/mappers/album_from_model.dart';
+import 'package:next_photo/src/features/albums/data/sources/album/album_data_source.dart';
+import 'package:next_photo/src/features/albums/domain/entities/album.dart';
+import 'package:next_photo/src/features/albums/domain/repositories/album_repository.dart';
+import 'package:next_photo/src/features/users/domain/entities/user.dart';
 
 /// The implementation for the album repository.
 @LazySingleton(as: AlbumRepository)

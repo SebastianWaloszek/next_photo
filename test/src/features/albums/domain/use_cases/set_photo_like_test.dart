@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:next_blog/src/base/domain/entities/result.dart';
-import 'package:next_blog/src/features/albums/domain/repositories/photo_repository.dart';
-import 'package:next_blog/src/features/albums/domain/use_cases/set_photo_like.dart';
+import 'package:next_photo/src/base/domain/entities/result.dart';
+import 'package:next_photo/src/features/albums/domain/repositories/photo_repository.dart';
+import 'package:next_photo/src/features/albums/domain/use_cases/set_photo_like.dart';
 
 import '../../../../../util/mock_classes.dart';
 import '../albums_domain_test_data.dart';

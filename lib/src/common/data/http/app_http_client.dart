@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:next_blog/src/common/data/http/adapter/shared.dart';
+import 'package:next_photo/src/common/data/http/adapter/shared.dart';
 
 /// A custom Dio HTTP client implementation.
 class AppHttpClient with DioMixin implements Dio {

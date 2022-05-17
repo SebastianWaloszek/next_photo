@@ -1,4 +1,4 @@
-import 'package:next_blog/src/features/users/domain/entities/user.dart';
+import 'package:next_photo/src/features/users/domain/entities/user.dart';
 
 const userId1 = UserId(1);
 

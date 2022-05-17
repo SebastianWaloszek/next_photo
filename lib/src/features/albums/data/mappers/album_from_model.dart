@@ -1,7 +1,7 @@
-import 'package:next_blog/src/base/data/mappers/mapper.dart';
-import 'package:next_blog/src/features/albums/data/models/album_model.dart';
-import 'package:next_blog/src/features/albums/domain/entities/album.dart';
-import 'package:next_blog/src/features/users/domain/entities/user.dart';
+import 'package:next_photo/src/base/data/mappers/mapper.dart';
+import 'package:next_photo/src/features/albums/data/models/album_model.dart';
+import 'package:next_photo/src/features/albums/domain/entities/album.dart';
+import 'package:next_photo/src/features/users/domain/entities/user.dart';
 
 /// Mapper for creating an [Album] entity from model.
 class AlbumFromModel implements Mapper<AlbumModel, Album> {

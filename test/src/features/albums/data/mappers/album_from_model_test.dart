@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:next_blog/src/features/albums/data/mappers/album_from_model.dart';
-import 'package:next_blog/src/features/albums/data/models/album_model.dart';
-import 'package:next_blog/src/features/albums/domain/entities/album.dart';
-import 'package:next_blog/src/features/users/domain/entities/user.dart';
+import 'package:next_photo/src/features/albums/data/mappers/album_from_model.dart';
+import 'package:next_photo/src/features/albums/data/models/album_model.dart';
+import 'package:next_photo/src/features/albums/domain/entities/album.dart';
+import 'package:next_photo/src/features/users/domain/entities/user.dart';
 
 void main() {
   group(

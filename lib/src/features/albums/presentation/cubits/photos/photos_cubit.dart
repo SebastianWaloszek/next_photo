@@ -1,11 +1,11 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:next_blog/src/base/domain/entities/result.dart';
-import 'package:next_blog/src/features/albums/domain/entities/album.dart';
-import 'package:next_blog/src/features/albums/domain/entities/photo.dart';
-import 'package:next_blog/src/features/albums/domain/use_cases/get_album_photos.dart';
-import 'package:next_blog/src/features/albums/domain/use_cases/get_all_photos.dart';
+import 'package:next_photo/src/base/domain/entities/result.dart';
+import 'package:next_photo/src/features/albums/domain/entities/album.dart';
+import 'package:next_photo/src/features/albums/domain/entities/photo.dart';
+import 'package:next_photo/src/features/albums/domain/use_cases/get_album_photos.dart';
+import 'package:next_photo/src/features/albums/domain/use_cases/get_all_photos.dart';
 
 part 'photos_cubit.freezed.dart';
 part 'photos_state.dart';

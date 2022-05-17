@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:next_blog/src/base/domain/entities/id.dart';
+import 'package:next_photo/src/base/domain/entities/id.dart';
 
 part 'user.freezed.dart';
 

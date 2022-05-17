@@ -1,10 +1,10 @@
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
-import 'package:next_blog/src/base/domain/entities/result.dart';
-import 'package:next_blog/src/features/users/data/mappers/user_from_model.dart';
-import 'package:next_blog/src/features/users/data/sources/user_data_source.dart';
-import 'package:next_blog/src/features/users/domain/entities/user.dart';
-import 'package:next_blog/src/features/users/domain/repositories/user_repository.dart';
+import 'package:next_photo/src/base/domain/entities/result.dart';
+import 'package:next_photo/src/features/users/data/mappers/user_from_model.dart';
+import 'package:next_photo/src/features/users/data/sources/user_data_source.dart';
+import 'package:next_photo/src/features/users/domain/entities/user.dart';
+import 'package:next_photo/src/features/users/domain/repositories/user_repository.dart';
 
 /// The implementation for the user repository.
 @LazySingleton(as: UserRepository)

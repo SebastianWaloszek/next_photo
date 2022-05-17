@@ -1,4 +1,4 @@
-# next_blog
+# next_photo
 
 A Flutter blog application. 
 

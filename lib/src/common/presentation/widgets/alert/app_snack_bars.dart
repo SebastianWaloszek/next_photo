@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:next_blog/common.dart';
-import 'package:next_blog/src/common/presentation/localization/generated/l10n.dart';
+import 'package:next_photo/common.dart';
+import 'package:next_photo/src/common/presentation/localization/generated/l10n.dart';
 
 /// Custom snack bars that can be shown.
 abstract class AppSnackBars {

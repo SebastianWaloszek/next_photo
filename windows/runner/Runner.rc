@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.waloszek" "\0"
-            VALUE "FileDescription", "next_blog" "\0"
+            VALUE "FileDescription", "next_photo" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "next_blog" "\0"
+            VALUE "InternalName", "next_photo" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2022 com.waloszek. All rights reserved." "\0"
-            VALUE "OriginalFilename", "next_blog.exe" "\0"
-            VALUE "ProductName", "next_blog" "\0"
+            VALUE "OriginalFilename", "next_photo.exe" "\0"
+            VALUE "ProductName", "next_photo" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

@@ -1,5 +1,5 @@
-import 'package:next_blog/src/base/domain/entities/result.dart';
-import 'package:next_blog/src/features/users/domain/entities/user.dart';
+import 'package:next_photo/src/base/domain/entities/result.dart';
+import 'package:next_photo/src/features/users/domain/entities/user.dart';
 
 /// The repository interface for handling users.
 abstract class UserRepository {

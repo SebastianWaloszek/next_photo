@@ -1,8 +1,8 @@
 import 'package:injectable/injectable.dart';
-import 'package:next_blog/src/base/domain/entities/result.dart';
-import 'package:next_blog/src/base/domain/use_cases/use_case.dart';
-import 'package:next_blog/src/features/users/domain/entities/user.dart';
-import 'package:next_blog/src/features/users/domain/repositories/user_repository.dart';
+import 'package:next_photo/src/base/domain/entities/result.dart';
+import 'package:next_photo/src/base/domain/use_cases/use_case.dart';
+import 'package:next_photo/src/features/users/domain/entities/user.dart';
+import 'package:next_photo/src/features/users/domain/repositories/user_repository.dart';
 
 /// A use case for getting a single user.
 @LazySingleton()

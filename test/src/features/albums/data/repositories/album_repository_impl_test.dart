@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:logger/logger.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:next_blog/src/features/albums/data/repositories/album_repository_impl.dart';
-import 'package:next_blog/src/features/albums/data/sources/album/album_data_source.dart';
-import 'package:next_blog/src/features/albums/domain/repositories/album_repository.dart';
+import 'package:next_photo/src/features/albums/data/repositories/album_repository_impl.dart';
+import 'package:next_photo/src/features/albums/data/sources/album/album_data_source.dart';
+import 'package:next_photo/src/features/albums/domain/repositories/album_repository.dart';
 
 import '../../../../../util/mock_classes.dart';
 import '../../../users/domain/users_domain_test_data.dart';

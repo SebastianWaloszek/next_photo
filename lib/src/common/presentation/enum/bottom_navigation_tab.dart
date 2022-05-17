@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:next_blog/src/common/presentation/localization/generated/l10n.dart';
-import 'package:next_blog/src/common/presentation/theme/app_icons.dart';
+import 'package:next_photo/src/common/presentation/localization/generated/l10n.dart';
+import 'package:next_photo/src/common/presentation/theme/app_icons.dart';
 
 /// A tab in a bottom navigation bar.
 enum BottomNavigationTab {

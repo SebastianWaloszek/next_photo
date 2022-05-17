@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:next_blog/common.dart';
+import 'package:next_photo/common.dart';
 
 /// A refresh indicator with custom styling.
 class AppRefreshIndicator extends StatelessWidget {

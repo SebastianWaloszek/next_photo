@@ -1,6 +1,6 @@
-import 'package:next_blog/src/features/albums/domain/entities/album.dart';
-import 'package:next_blog/src/features/albums/domain/entities/photo.dart';
-import 'package:next_blog/src/features/users/domain/entities/user.dart';
+import 'package:next_photo/src/features/albums/domain/entities/album.dart';
+import 'package:next_photo/src/features/albums/domain/entities/photo.dart';
+import 'package:next_photo/src/features/users/domain/entities/user.dart';
 
 const albumId1 = AlbumId(1);
 

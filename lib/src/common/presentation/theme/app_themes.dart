@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:next_blog/src/common/presentation/theme/color/theme_color.dart';
+import 'package:next_photo/src/common/presentation/theme/color/theme_color.dart';
 
 /// Defines theme data for a specific theme mode.
 ///

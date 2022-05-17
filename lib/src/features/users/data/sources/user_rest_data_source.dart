@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
-import 'package:next_blog/src/features/users/data/models/user_model.dart';
-import 'package:next_blog/src/features/users/data/sources/user_data_source.dart';
+import 'package:next_photo/src/features/users/data/models/user_model.dart';
+import 'package:next_photo/src/features/users/data/sources/user_data_source.dart';
 
 import 'package:retrofit/retrofit.dart';
 

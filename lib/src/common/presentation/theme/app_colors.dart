@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:next_blog/src/common/presentation/theme/color/theme_color.dart';
-import 'package:next_blog/src/common/presentation/theme/color/themed_color.dart';
+import 'package:next_photo/src/common/presentation/theme/color/theme_color.dart';
+import 'package:next_photo/src/common/presentation/theme/color/themed_color.dart';
 
 // ignore_for_file: public_member_api_docs
 

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.waloszek.next_blog">
+    package="com.waloszek.next_photo">
    <application
-        android:label="NextBlog"
+        android:label="NextPhoto"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

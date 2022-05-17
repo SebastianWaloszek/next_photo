@@ -1,7 +1,7 @@
-import 'package:next_blog/src/base/data/mappers/mapper.dart';
-import 'package:next_blog/src/features/albums/data/models/photo_model.dart';
-import 'package:next_blog/src/features/albums/domain/entities/album.dart';
-import 'package:next_blog/src/features/albums/domain/entities/photo.dart';
+import 'package:next_photo/src/base/data/mappers/mapper.dart';
+import 'package:next_photo/src/features/albums/data/models/photo_model.dart';
+import 'package:next_photo/src/features/albums/domain/entities/album.dart';
+import 'package:next_photo/src/features/albums/domain/entities/photo.dart';
 
 /// Mapper for creating an [Photo] entity from model.
 class PhotoFromModel implements Mapper<PhotoModel, Photo> {

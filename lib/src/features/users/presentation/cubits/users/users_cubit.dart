@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:next_blog/src/base/domain/entities/result.dart';
-import 'package:next_blog/src/features/users/domain/entities/user.dart';
-import 'package:next_blog/src/features/users/domain/use_cases/get_all_users.dart';
+import 'package:next_photo/src/base/domain/entities/result.dart';
+import 'package:next_photo/src/features/users/domain/entities/user.dart';
+import 'package:next_photo/src/features/users/domain/use_cases/get_all_users.dart';
 
 part 'users_cubit.freezed.dart';
 part 'users_state.dart';

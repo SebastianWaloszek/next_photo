@@ -1,4 +1,4 @@
-import 'package:next_blog/src/features/albums/data/models/photo_model.dart';
+import 'package:next_photo/src/features/albums/data/models/photo_model.dart';
 
 /// The data source interface for handling photo models.
 abstract class PhotoDataSource {

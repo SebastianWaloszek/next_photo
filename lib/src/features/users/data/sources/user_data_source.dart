@@ -1,4 +1,4 @@
-import 'package:next_blog/src/features/users/data/models/user_model.dart';
+import 'package:next_photo/src/features/users/data/models/user_model.dart';
 
 /// The data source interface for handling user models.
 abstract class UserDataSource {

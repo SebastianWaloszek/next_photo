@@ -1,7 +1,7 @@
 import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:next_blog/src/common/data/http/app_http_client.dart';
+import 'package:next_photo/src/common/data/http/app_http_client.dart';
 
 void main() {
   group(

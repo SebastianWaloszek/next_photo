@@ -1,9 +1,9 @@
 import 'package:injectable/injectable.dart';
-import 'package:next_blog/src/base/domain/entities/result.dart';
-import 'package:next_blog/src/base/domain/use_cases/use_case.dart';
-import 'package:next_blog/src/features/albums/domain/entities/album.dart';
-import 'package:next_blog/src/features/albums/domain/repositories/album_repository.dart';
-import 'package:next_blog/src/features/users/domain/entities/user.dart';
+import 'package:next_photo/src/base/domain/entities/result.dart';
+import 'package:next_photo/src/base/domain/use_cases/use_case.dart';
+import 'package:next_photo/src/features/albums/domain/entities/album.dart';
+import 'package:next_photo/src/features/albums/domain/repositories/album_repository.dart';
+import 'package:next_photo/src/features/users/domain/entities/user.dart';
 
 /// A use case for getting all photos albums belonging to a user.
 @LazySingleton()

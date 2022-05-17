@@ -1,4 +1,4 @@
-name: next_blog
+name: next_photo
 description: A Flutter blog application.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev

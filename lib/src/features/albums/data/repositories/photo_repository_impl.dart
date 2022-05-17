@@ -1,13 +1,13 @@
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
-import 'package:next_blog/src/base/domain/entities/result.dart';
-import 'package:next_blog/src/features/albums/data/mappers/photo_from_model.dart';
-import 'package:next_blog/src/features/albums/data/models/photo_model.dart';
-import 'package:next_blog/src/features/albums/data/sources/photo/photo_data_source.dart';
-import 'package:next_blog/src/features/albums/data/storages/photo_like_data_storage.dart';
-import 'package:next_blog/src/features/albums/domain/entities/album.dart';
-import 'package:next_blog/src/features/albums/domain/entities/photo.dart';
-import 'package:next_blog/src/features/albums/domain/repositories/photo_repository.dart';
+import 'package:next_photo/src/base/domain/entities/result.dart';
+import 'package:next_photo/src/features/albums/data/mappers/photo_from_model.dart';
+import 'package:next_photo/src/features/albums/data/models/photo_model.dart';
+import 'package:next_photo/src/features/albums/data/sources/photo/photo_data_source.dart';
+import 'package:next_photo/src/features/albums/data/storages/photo_like_data_storage.dart';
+import 'package:next_photo/src/features/albums/domain/entities/album.dart';
+import 'package:next_photo/src/features/albums/domain/entities/photo.dart';
+import 'package:next_photo/src/features/albums/domain/repositories/photo_repository.dart';
 
 /// The implementation for the photo repository.
 @LazySingleton(as: PhotoRepository)

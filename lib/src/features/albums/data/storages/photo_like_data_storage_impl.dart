@@ -1,5 +1,5 @@
 import 'package:injectable/injectable.dart';
-import 'package:next_blog/src/features/albums/data/storages/photo_like_data_storage.dart';
+import 'package:next_photo/src/features/albums/data/storages/photo_like_data_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// Shared preferences implementation of the photo like data storage.

@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
-import 'package:next_blog/src/common/data/http/app_http_client.dart';
+import 'package:next_photo/src/common/data/http/app_http_client.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// The injection module used to inject third party dependencies.

@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:next_blog/src/di/injector.dart';
+import 'package:next_photo/src/di/injector.dart';
 
 /// A provider for a [B] type bloc or cubit that is injected.
 class InjectedBlocProvider<B extends BlocBase<Object>> extends BlocProvider<B> {

@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:next_blog/src/features/users/data/mappers/geo_location_from_model.dart';
-import 'package:next_blog/src/features/users/data/models/user_model.dart';
-import 'package:next_blog/src/features/users/domain/entities/user.dart';
+import 'package:next_photo/src/features/users/data/mappers/geo_location_from_model.dart';
+import 'package:next_photo/src/features/users/data/models/user_model.dart';
+import 'package:next_photo/src/features/users/domain/entities/user.dart';
 
 void main() {
   group(

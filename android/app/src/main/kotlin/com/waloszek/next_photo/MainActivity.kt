@@ -1,4 +1,4 @@
-package com.waloszek.next_blog
+package com.waloszek.next_photo
 
 import io.flutter.embedding.android.FlutterActivity
 

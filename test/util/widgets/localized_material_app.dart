@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:next_blog/src/common/presentation/localization/localization.dart';
+import 'package:next_photo/src/common/presentation/localization/localization.dart';
 
 class LocalizedMaterialApp extends StatelessWidget {
   const LocalizedMaterialApp({

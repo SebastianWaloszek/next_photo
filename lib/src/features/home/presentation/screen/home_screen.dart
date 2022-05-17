@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:next_blog/src/base/presentation/widgets/provider/injected_bloc_provider.dart';
-import 'package:next_blog/src/common/presentation/localization/generated/l10n.dart';
-import 'package:next_blog/src/common/presentation/theme/app_colors.dart';
-import 'package:next_blog/src/common/presentation/theme/app_dimens.dart';
-import 'package:next_blog/src/common/presentation/theme/app_icons.dart';
-import 'package:next_blog/src/common/presentation/theme/app_text_styles.dart';
-import 'package:next_blog/src/common/presentation/widgets/app_refresh_indicator.dart';
-import 'package:next_blog/src/common/presentation/widgets/button/app_icon_button.dart';
-import 'package:next_blog/src/common/presentation/widgets/text/app_logo.dart';
-import 'package:next_blog/src/features/albums/presentation/cubits/photos/photos_cubit.dart';
-import 'package:next_blog/src/features/home/presentation/widgets/photo_list_item.dart';
+import 'package:next_photo/src/base/presentation/widgets/provider/injected_bloc_provider.dart';
+import 'package:next_photo/src/common/presentation/localization/generated/l10n.dart';
+import 'package:next_photo/src/common/presentation/theme/app_colors.dart';
+import 'package:next_photo/src/common/presentation/theme/app_dimens.dart';
+import 'package:next_photo/src/common/presentation/theme/app_icons.dart';
+import 'package:next_photo/src/common/presentation/theme/app_text_styles.dart';
+import 'package:next_photo/src/common/presentation/widgets/app_refresh_indicator.dart';
+import 'package:next_photo/src/common/presentation/widgets/button/app_icon_button.dart';
+import 'package:next_photo/src/common/presentation/widgets/text/app_logo.dart';
+import 'package:next_photo/src/features/albums/presentation/cubits/photos/photos_cubit.dart';
+import 'package:next_photo/src/features/home/presentation/widgets/photo_list_item.dart';
 
 /// The screen with photo feed and stories.
 class HomeScreen extends StatelessWidget {

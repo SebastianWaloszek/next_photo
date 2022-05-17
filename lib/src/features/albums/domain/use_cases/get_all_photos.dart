@@ -1,8 +1,8 @@
 import 'package:injectable/injectable.dart';
-import 'package:next_blog/src/base/domain/entities/result.dart';
-import 'package:next_blog/src/base/domain/use_cases/use_case.dart';
-import 'package:next_blog/src/features/albums/domain/entities/photo.dart';
-import 'package:next_blog/src/features/albums/domain/repositories/photo_repository.dart';
+import 'package:next_photo/src/base/domain/entities/result.dart';
+import 'package:next_photo/src/base/domain/use_cases/use_case.dart';
+import 'package:next_photo/src/features/albums/domain/entities/photo.dart';
+import 'package:next_photo/src/features/albums/domain/repositories/photo_repository.dart';
 
 /// A use case for getting all available photos.
 @LazySingleton()

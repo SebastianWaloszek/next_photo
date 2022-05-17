@@ -1,8 +1,8 @@
-import 'package:next_blog/src/base/data/mappers/mapper.dart';
-import 'package:next_blog/src/features/users/data/mappers/address_from_model.dart';
-import 'package:next_blog/src/features/users/data/mappers/company_from_model.dart';
-import 'package:next_blog/src/features/users/data/models/user_model.dart';
-import 'package:next_blog/src/features/users/domain/entities/user.dart';
+import 'package:next_photo/src/base/data/mappers/mapper.dart';
+import 'package:next_photo/src/features/users/data/mappers/address_from_model.dart';
+import 'package:next_photo/src/features/users/data/mappers/company_from_model.dart';
+import 'package:next_photo/src/features/users/data/models/user_model.dart';
+import 'package:next_photo/src/features/users/domain/entities/user.dart';
 
 /// Mapper for creating an [User] entity from model.
 class UserFromModel implements Mapper<UserModel, User> {

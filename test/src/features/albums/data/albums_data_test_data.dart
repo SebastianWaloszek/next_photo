@@ -1,5 +1,5 @@
-import 'package:next_blog/src/features/albums/data/models/album_model.dart';
-import 'package:next_blog/src/features/albums/data/models/photo_model.dart';
+import 'package:next_photo/src/features/albums/data/models/album_model.dart';
+import 'package:next_photo/src/features/albums/data/models/photo_model.dart';
 
 const albumModel1 = AlbumModel(
   id: 1,

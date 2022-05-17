@@ -1,11 +1,11 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:next_blog/src/base/domain/entities/result.dart';
-import 'package:next_blog/src/features/albums/domain/entities/photo.dart';
-import 'package:next_blog/src/features/albums/domain/use_cases/get_album_photos.dart';
-import 'package:next_blog/src/features/albums/domain/use_cases/get_all_photos.dart';
-import 'package:next_blog/src/features/albums/presentation/cubits/photos/photos_cubit.dart';
+import 'package:next_photo/src/base/domain/entities/result.dart';
+import 'package:next_photo/src/features/albums/domain/entities/photo.dart';
+import 'package:next_photo/src/features/albums/domain/use_cases/get_album_photos.dart';
+import 'package:next_photo/src/features/albums/domain/use_cases/get_all_photos.dart';
+import 'package:next_photo/src/features/albums/presentation/cubits/photos/photos_cubit.dart';
 
 import '../../../../../util/fallback_values.dart';
 import '../../../../../util/mock_classes.dart';

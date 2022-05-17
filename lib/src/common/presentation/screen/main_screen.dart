@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:next_blog/src/base/presentation/widgets/provider/injected_bloc_provider.dart';
-import 'package:next_blog/src/common/presentation/cubit/bottom_navigation_cubit.dart';
-import 'package:next_blog/src/common/presentation/enum/bottom_navigation_tab.dart';
-import 'package:next_blog/src/common/presentation/theme/app_colors.dart';
-import 'package:next_blog/src/common/presentation/widgets/alert/app_snack_bars.dart';
-import 'package:next_blog/src/features/home/presentation/screen/home_screen.dart';
+import 'package:next_photo/src/base/presentation/widgets/provider/injected_bloc_provider.dart';
+import 'package:next_photo/src/common/presentation/cubit/bottom_navigation_cubit.dart';
+import 'package:next_photo/src/common/presentation/enum/bottom_navigation_tab.dart';
+import 'package:next_photo/src/common/presentation/theme/app_colors.dart';
+import 'package:next_photo/src/common/presentation/widgets/alert/app_snack_bars.dart';
+import 'package:next_photo/src/features/home/presentation/screen/home_screen.dart';
 
 /// The primary screen with bottom navigation.
 class MainScreen extends StatefulWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:next_blog/src/common/presentation/theme/app_colors.dart';
+import 'package:next_photo/src/common/presentation/theme/app_colors.dart';
 
 /// The logo of the application.
 class AppLogo extends StatelessWidget {
