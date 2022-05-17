@@ -8,7 +8,7 @@ import 'package:next_photo/src/di/injector.dart';
 Future<void> runApplication() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  setupDependencies();
+  await setupDependencies();
 
   BlocOverrides.runZoned(
     () {

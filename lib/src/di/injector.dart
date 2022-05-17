@@ -10,4 +10,4 @@ final getIt = GetIt.instance;
   asExtension: true,
   initializerName: 'init',
 )
-void setupDependencies() => getIt.init();
+Future<void> setupDependencies() => getIt.init();
