@@ -76,6 +76,10 @@ Run unit tests by typing:
 ```
 flutter test
 ```
+Run integration tests by typing:
+```
+flutter test integration_test --flavor=stage
+```
 
 ## Index files
 To update the list of files included in documentation for `base`, `common` and `features` libraries code generation with [index_generator](https://pub.dev/packages/index_generator) is used.

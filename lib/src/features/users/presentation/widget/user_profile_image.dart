@@ -23,7 +23,7 @@ class UserProfileImage extends StatelessWidget {
       backgroundColor: AppColors.secondaryContent(context),
       backgroundImage: NetworkImage(
         // TODO: Replace random image placeholder
-        'https://picsum.photos/id/${Random().nextInt(100)}/200/300',
+        'https://picsum.photos/seed/${Random().nextInt(100)}/200/300',
       ),
     );
   }

@@ -8,30 +8,56 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
+import 'package:next_photo/src/common/presentation/theme/app_icons.dart';
 
 import 'package:next_photo/src/main_dev.dart' as app;
 
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
-  // TODO: Replace with proper tests.
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    app.main();
+  testWidgets(
+    'Like photo smoke test',
+    (WidgetTester tester) async {
+      app.main();
 
-    // Trigger a frame.
-    await tester.pumpAndSettle();
+      await tester.pumpAndSettle(const Duration(seconds: 5));
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+      // Find first not liked photo.
+      expect(
+        find.byIcon(AppIcons.heart).at(1),
+        findsOneWidget,
+      );
+      expect(
+        find.textContaining(
+          'accusamus beatae ad facilis cum similique qui sunt',
+          findRichText: true,
+        ),
+        findsOneWidget,
+      );
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+      // Like photo.
+      await tester.tap(
+        find.byIcon(AppIcons.heart).at(1),
+      );
+      await tester.pumpAndSettle();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
-  });
+      // Find photo liked.
+      expect(
+        find.byIcon(AppIcons.heartFilled).first,
+        findsOneWidget,
+      );
+
+      // Unlike photo.
+      await tester.tap(
+        find.byIcon(AppIcons.heartFilled).first,
+      );
+      await tester.pumpAndSettle();
+
+      // Find unliked photo.
+      expect(
+        find.byIcon(AppIcons.heart).at(1),
+        findsOneWidget,
+      );
+    },
+  );
 }
