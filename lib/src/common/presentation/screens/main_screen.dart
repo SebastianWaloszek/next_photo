@@ -19,29 +19,25 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  final List<Widget> _tabs = const [
-    HomeScreen(),
-  ];
+  final _tabs = const {
+    BottomNavigationTab.home: HomeScreen(),
+  };
 
-  final _pageController = PageController();
+  var _selectedTab = BottomNavigationTab.home;
 
   @override
   Widget build(BuildContext context) {
     return InjectedBlocProvider<BottomNavigationCubit>(
       child: AppScreen(
         body: BlocListener<BottomNavigationCubit, BottomNavigationTab>(
-          listener: (context, selectedTab) => _pageController.jumpToPage(
-            selectedTab.index,
-          ),
-          child: PageView(
-            controller: _pageController,
-            physics: const NeverScrollableScrollPhysics(),
-            children: _tabs,
-          ),
+          listener: (context, selectedTab) {
+            setState(() {
+              _selectedTab = BottomNavigationTab.home;
+            });
+          },
+          child: _tabs[_selectedTab],
         ),
-        bottomNavigationBar: _BottomNavigationBar(
-          pageController: _pageController,
-        ),
+        bottomNavigationBar: const _BottomNavigationBar(),
       ),
     );
   }
@@ -50,10 +46,7 @@ class _MainScreenState extends State<MainScreen> {
 class _BottomNavigationBar extends StatelessWidget {
   const _BottomNavigationBar({
     Key? key,
-    required this.pageController,
   }) : super(key: key);
-
-  final PageController pageController;
 
   @override
   Widget build(BuildContext context) {
@@ -62,14 +55,11 @@ class _BottomNavigationBar extends StatelessWidget {
         return BottomNavigationBar(
           items: BottomNavigationTab.values.map(
             (tab) {
-              final isSelected = (pageController.page ?? 0).toInt() ==
-                  BottomNavigationTab.values.indexOf(tab);
-
               if (tab == BottomNavigationTab.profile) {
                 return _ProfileBottomNavigationBarItem();
               } else {
                 return tab.mapToBarItem(
-                  isSelected: isSelected,
+                  isSelected: tab == state,
                 );
               }
             },
