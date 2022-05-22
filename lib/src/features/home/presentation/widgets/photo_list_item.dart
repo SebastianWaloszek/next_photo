@@ -91,7 +91,7 @@ class _Photo extends StatelessWidget {
           image: DecorationImage(
             fit: BoxFit.fitWidth,
             image: NetworkImage(
-              photo.url,
+              photo.thumbnailUrl,
             ),
           ),
         ),

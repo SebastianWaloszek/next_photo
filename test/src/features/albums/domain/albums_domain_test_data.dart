@@ -27,14 +27,16 @@ const photoId2 = PhotoId(2);
 const photo1 = Photo(
   id: PhotoId(1),
   albumId: AlbumId(1),
-  url: 'https://picsum.photos/id/1/1024/1024',
+  url: 'https://picsum.photos/id/1/1200/1200',
+  thumbnailUrl: 'https://picsum.photos/id/1/600/600',
   title: 'accusamus beatae ad facilis cum similique qui sunt',
 );
 
 const photo2 = Photo(
   id: PhotoId(2),
   albumId: AlbumId(1),
-  url: 'https://picsum.photos/id/2/1024/1024',
+  url: 'https://picsum.photos/id/2/1200/1200',
+  thumbnailUrl: 'https://picsum.photos/id/2/600/600',
   title: 'reprehenderit est deserunt velit ipsam',
   isLiked: true,
 );

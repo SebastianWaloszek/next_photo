@@ -13,6 +13,7 @@ class Photo with _$Photo {
     required AlbumId albumId,
     required String title,
     required String url,
+    required String thumbnailUrl,
     @Default(false) bool isLiked,
   }) = _Photo;
 }
