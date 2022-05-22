@@ -106,3 +106,11 @@ flutter test --coverage
 remove_from_coverage -f coverage/lcov.info -r '.g.dart|.freezed.dart$|\bgenerated\b'
 genhtml coverage/lcov.info -o coverage/html
 ```
+
+## App icon
+To change the app icon on mobile change the files inside [launcher_icon](launcher_icon) and then run:
+```
+flutter pub get
+flutter pub run flutter_launcher_icons:main -f flutter_launcher_icons-development.yaml
+```
+Running it for one file will run it for all flavors.

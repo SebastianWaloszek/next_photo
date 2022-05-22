@@ -2,6 +2,6 @@ flutter_icons:
   android: true
   ios: true
   adaptive_icon_background: "#ffffff"
-  adaptive_icon_foreground: "assets/launcher_icon/android/icon_android_prod.png"
-  image_path_android: "assets/launcher_icon/android/icon_android_prod.png"
-  image_path_ios: "assets/launcher_icon/ios/icon_ios_prod.png"
+  adaptive_icon_foreground: "launcher_icon/android/icon_android_prod.png"
+  image_path_android: "launcher_icon/android/icon_android_prod.png"
+  image_path_ios: "launcher_icon/ios/icon_ios_prod.png"
