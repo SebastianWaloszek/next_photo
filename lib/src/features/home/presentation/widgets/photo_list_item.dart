@@ -3,13 +3,16 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:like_button/like_button.dart';
 import 'package:next_photo/src/base/presentation/widgets/provider/injected_bloc_provider.dart';
 import 'package:next_photo/src/common/presentation/localization/generated/l10n.dart';
+import 'package:next_photo/src/common/presentation/screens/photo_view_screen.dart';
 import 'package:next_photo/src/common/presentation/theme/app_colors.dart';
 import 'package:next_photo/src/common/presentation/theme/app_dimens.dart';
 import 'package:next_photo/src/common/presentation/theme/app_icons.dart';
 import 'package:next_photo/src/common/presentation/theme/app_text_styles.dart';
+import 'package:next_photo/src/common/presentation/widgets/alert/app_snack_bars.dart';
 import 'package:next_photo/src/common/presentation/widgets/button/app_icon_button.dart';
 import 'package:next_photo/src/features/albums/domain/entities/photo.dart';
 import 'package:next_photo/src/features/albums/presentation/cubits/photo_like/photo_like_cubit.dart';
+import 'package:next_photo/src/features/users/presentation/widget/user_profile_image.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 /// A list item for showing a photo with its details.
@@ -36,29 +39,31 @@ class _PhotoListItemState extends State<PhotoListItem>
   Widget build(BuildContext context) {
     super.build(context);
 
-    return SizedBox(
-      child: Column(
-        children: [
-          const Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: AppDimens.contentPaddingHorizontal,
-              vertical: AppDimens.contentPaddingVertical,
+    return Material(
+      child: SizedBox(
+        child: Column(
+          children: [
+            const Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: AppDimens.contentPaddingHorizontal,
+                vertical: AppDimens.contentPaddingVertical,
+              ),
+              child: _Header(),
             ),
-            child: _Header(),
-          ),
-          _Photo(
-            photo: widget.photo,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: AppDimens.contentPaddingHorizontal,
-              vertical: AppDimens.contentPaddingVertical,
-            ),
-            child: _Footer(
+            _Photo(
               photo: widget.photo,
             ),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: AppDimens.contentPaddingHorizontal,
+                vertical: AppDimens.contentPaddingVertical,
+              ),
+              child: _Footer(
+                photo: widget.photo,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -74,14 +79,20 @@ class _Photo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Ink(
-      width: double.infinity,
-      height: 300,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          fit: BoxFit.fitWidth,
-          image: NetworkImage(
-            photo.url,
+    return InkWell(
+      onTap: () => PhotoViewScreen.open(
+        context,
+        photoUrl: photo.url,
+      ),
+      child: Ink(
+        width: double.infinity,
+        height: 300,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            fit: BoxFit.fitWidth,
+            image: NetworkImage(
+              photo.url,
+            ),
           ),
         ),
       ),
@@ -96,9 +107,8 @@ class _Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Placeholder(
-          fallbackHeight: 34,
-          fallbackWidth: 34,
+        const UserProfileImage(
+          radius: 15,
         ),
         const SizedBox(width: 10),
         Column(
@@ -163,52 +173,31 @@ class _Footer extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 10),
-        Row(
-          children: [
-            const Placeholder(
-              fallbackHeight: 16,
-              fallbackWidth: 40,
-            ),
-            const SizedBox(width: 8),
-            Text(
-              // TODO: Replace username and others like count placeholders.
-              S.of(context).likedBy('bora.dn', 1657),
-              style: AppTextStyles.headline2(context),
-            ),
-          ],
+        Text(
+          S.of(context).likes(1657),
+          style: AppTextStyles.headline1(context),
         ),
         const SizedBox(height: 10),
-        Text(
-          photo.title,
-          style: AppTextStyles.headline2(context),
-        ),
-        const SizedBox(height: 10),
-        Text(
-          // TODO: Replace comment number placeholder.
-          S.of(context).viewAllComments(10),
-          style: AppTextStyles.headline2(
-            context,
-            color: AppColors.secondaryContent(context),
+        RichText(
+          text: TextSpan(
+            children: <TextSpan>[
+              TextSpan(
+                // TODO: Replace text placeholder.
+                text: 'yankodesign',
+                style: AppTextStyles.headline1(context),
+              ),
+              const TextSpan(text: ' '),
+              TextSpan(
+                text: photo.title,
+                style: AppTextStyles.headline2(context),
+              ),
+            ],
           ),
         ),
         const SizedBox(height: 10),
-        Row(
-          children: <Widget>[
-            const Placeholder(
-              fallbackHeight: 26,
-              fallbackWidth: 26,
-            ),
-            const SizedBox(width: 8),
-            // TODO: Replace add a comment text placeholder.
-            Text(
-              S.of(context).addAComment,
-              style: AppTextStyles.headline2(
-                context,
-                color: AppColors.secondaryContent(context),
-              ),
-            ),
-          ],
-        ),
+        const _ViewAllCommentsButton(),
+        const SizedBox(height: 10),
+        const _AddACommentButton(),
         const SizedBox(height: 10),
         Text(
           timeago.format(
@@ -221,6 +210,53 @@ class _Footer extends StatelessWidget {
           ),
         )
       ],
+    );
+  }
+}
+
+class _ViewAllCommentsButton extends StatelessWidget {
+  const _ViewAllCommentsButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      // TODO: Replace not implemented message placeholder.
+      onTap: () => AppSnackBars.showUnimplementedMessage(context),
+      child: Text(
+        // TODO: Replace comment number placeholder.
+        S.of(context).viewAllComments(10),
+        style: AppTextStyles.headline2(
+          context,
+          color: AppColors.secondaryContent(context),
+        ),
+      ),
+    );
+  }
+}
+
+class _AddACommentButton extends StatelessWidget {
+  const _AddACommentButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => AppSnackBars.showUnimplementedMessage(context),
+      child: Row(
+        children: <Widget>[
+          const UserProfileImage(
+            radius: 11,
+          ),
+          const SizedBox(width: 8),
+          // TODO: Replace add a comment text placeholder.
+          Text(
+            S.of(context).addAComment,
+            style: AppTextStyles.headline2(
+              context,
+              color: AppColors.secondaryContent(context),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

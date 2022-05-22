@@ -14,7 +14,7 @@ abstract class AppSnackBars {
         S.of(context).featureNotImplemented,
         style: AppTextStyles.body2(
           context,
-          color: AppColors.background(context),
+          color: LightThemeColor.background,
         ),
       ),
     );

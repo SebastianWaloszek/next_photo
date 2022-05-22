@@ -20,7 +20,6 @@ mixin _$Photo {
   AlbumId get albumId => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get url => throw _privateConstructorUsedError;
-  String get thumbnailUrl => throw _privateConstructorUsedError;
   bool get isLiked => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -32,12 +31,7 @@ abstract class $PhotoCopyWith<$Res> {
   factory $PhotoCopyWith(Photo value, $Res Function(Photo) then) =
       _$PhotoCopyWithImpl<$Res>;
   $Res call(
-      {PhotoId id,
-      AlbumId albumId,
-      String title,
-      String url,
-      String thumbnailUrl,
-      bool isLiked});
+      {PhotoId id, AlbumId albumId, String title, String url, bool isLiked});
 }
 
 /// @nodoc
@@ -54,7 +48,6 @@ class _$PhotoCopyWithImpl<$Res> implements $PhotoCopyWith<$Res> {
     Object? albumId = freezed,
     Object? title = freezed,
     Object? url = freezed,
-    Object? thumbnailUrl = freezed,
     Object? isLiked = freezed,
   }) {
     return _then(_value.copyWith(
@@ -74,10 +67,6 @@ class _$PhotoCopyWithImpl<$Res> implements $PhotoCopyWith<$Res> {
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      thumbnailUrl: thumbnailUrl == freezed
-          ? _value.thumbnailUrl
-          : thumbnailUrl // ignore: cast_nullable_to_non_nullable
-              as String,
       isLiked: isLiked == freezed
           ? _value.isLiked
           : isLiked // ignore: cast_nullable_to_non_nullable
@@ -92,12 +81,7 @@ abstract class _$$_PhotoCopyWith<$Res> implements $PhotoCopyWith<$Res> {
       __$$_PhotoCopyWithImpl<$Res>;
   @override
   $Res call(
-      {PhotoId id,
-      AlbumId albumId,
-      String title,
-      String url,
-      String thumbnailUrl,
-      bool isLiked});
+      {PhotoId id, AlbumId albumId, String title, String url, bool isLiked});
 }
 
 /// @nodoc
@@ -115,7 +99,6 @@ class __$$_PhotoCopyWithImpl<$Res> extends _$PhotoCopyWithImpl<$Res>
     Object? albumId = freezed,
     Object? title = freezed,
     Object? url = freezed,
-    Object? thumbnailUrl = freezed,
     Object? isLiked = freezed,
   }) {
     return _then(_$_Photo(
@@ -135,10 +118,6 @@ class __$$_PhotoCopyWithImpl<$Res> extends _$PhotoCopyWithImpl<$Res>
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      thumbnailUrl: thumbnailUrl == freezed
-          ? _value.thumbnailUrl
-          : thumbnailUrl // ignore: cast_nullable_to_non_nullable
-              as String,
       isLiked: isLiked == freezed
           ? _value.isLiked
           : isLiked // ignore: cast_nullable_to_non_nullable
@@ -155,7 +134,6 @@ class _$_Photo implements _Photo {
       required this.albumId,
       required this.title,
       required this.url,
-      required this.thumbnailUrl,
       this.isLiked = false});
 
   @override
@@ -167,14 +145,12 @@ class _$_Photo implements _Photo {
   @override
   final String url;
   @override
-  final String thumbnailUrl;
-  @override
   @JsonKey()
   final bool isLiked;
 
   @override
   String toString() {
-    return 'Photo(id: $id, albumId: $albumId, title: $title, url: $url, thumbnailUrl: $thumbnailUrl, isLiked: $isLiked)';
+    return 'Photo(id: $id, albumId: $albumId, title: $title, url: $url, isLiked: $isLiked)';
   }
 
   @override
@@ -186,8 +162,6 @@ class _$_Photo implements _Photo {
             const DeepCollectionEquality().equals(other.albumId, albumId) &&
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality()
-                .equals(other.thumbnailUrl, thumbnailUrl) &&
             const DeepCollectionEquality().equals(other.isLiked, isLiked));
   }
 
@@ -198,7 +172,6 @@ class _$_Photo implements _Photo {
       const DeepCollectionEquality().hash(albumId),
       const DeepCollectionEquality().hash(title),
       const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(thumbnailUrl),
       const DeepCollectionEquality().hash(isLiked));
 
   @JsonKey(ignore: true)
@@ -213,7 +186,6 @@ abstract class _Photo implements Photo {
       required final AlbumId albumId,
       required final String title,
       required final String url,
-      required final String thumbnailUrl,
       final bool isLiked}) = _$_Photo;
 
   @override
@@ -224,8 +196,6 @@ abstract class _Photo implements Photo {
   String get title => throw _privateConstructorUsedError;
   @override
   String get url => throw _privateConstructorUsedError;
-  @override
-  String get thumbnailUrl => throw _privateConstructorUsedError;
   @override
   bool get isLiked => throw _privateConstructorUsedError;
   @override

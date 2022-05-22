@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:next_photo/src/common/presentation/theme/app_colors.dart';
 import 'package:next_photo/src/common/presentation/widgets/alert/app_snack_bars.dart';
 
 /// An icon button with custom styling.
@@ -24,6 +25,7 @@ class AppIconButton extends StatelessWidget {
       child: Icon(
         icon,
         size: 28,
+        color: AppColors.primaryContent(context),
       ),
     );
   }

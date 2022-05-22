@@ -11,8 +11,7 @@ class PhotoFromModel implements Mapper<PhotoModel, Photo> {
       id: PhotoId(photoModel.id),
       albumId: AlbumId(photoModel.albumId),
       title: photoModel.title ?? '',
-      url: photoModel.url,
-      thumbnailUrl: photoModel.thumbnailUrl,
+      url: 'https://picsum.photos/id/${photoModel.id}/1024/1024',
     );
   }
 }

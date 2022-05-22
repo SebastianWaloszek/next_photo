@@ -22,6 +22,11 @@ dependencies:
   json_annotation: ^4.5.0
   like_button: ^2.0.4
   logger: ^1.1.0
+  # Fork used because of: https://github.com/bluefireteam/photo_view/issues/502
+  photo_view:
+    git:
+      url: https://github.com/bluefireteam/photo_view
+      ref: master
   retrofit: ^3.0.1+1
   shared_preferences: ^2.0.15
   timeago: ^3.2.2
@@ -116,6 +121,9 @@ index_generator:
         - '**'
       exclude:
         - 'presentation/localization/generated/**'
+        - 'data/http/adapter/unsupported.dart'
+        - 'data/http/adapter/mobile_adapter.dart'
+        - 'data/http/adapter/web_adapter.dart'
       name: common
       library: common
 

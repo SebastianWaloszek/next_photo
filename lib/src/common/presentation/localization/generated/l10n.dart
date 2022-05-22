@@ -110,13 +110,15 @@ class S {
     );
   }
 
-  /// `Liked by {userName} and {othersCount} others`
-  String likedBy(Object userName, Object othersCount) {
-    return Intl.message(
-      'Liked by $userName and $othersCount others',
-      name: 'likedBy',
+  /// `{count, plural, one{1 like} other{{count} likes}}`
+  String likes(num count) {
+    return Intl.plural(
+      count,
+      one: '1 like',
+      other: '$count likes',
+      name: 'likes',
       desc: '',
-      args: [userName, othersCount],
+      args: [count],
     );
   }
 

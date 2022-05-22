@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:next_photo/src/base/presentation/widgets/provider/injected_bloc_provider.dart';
 import 'package:next_photo/src/common/presentation/localization/generated/l10n.dart';
-import 'package:next_photo/src/common/presentation/theme/app_colors.dart';
 import 'package:next_photo/src/common/presentation/theme/app_dimens.dart';
 import 'package:next_photo/src/common/presentation/theme/app_icons.dart';
 import 'package:next_photo/src/common/presentation/theme/app_text_styles.dart';
 import 'package:next_photo/src/common/presentation/widgets/app_refresh_indicator.dart';
+import 'package:next_photo/src/common/presentation/widgets/app_screen.dart';
 import 'package:next_photo/src/common/presentation/widgets/button/app_icon_button.dart';
 import 'package:next_photo/src/common/presentation/widgets/text/app_logo.dart';
 import 'package:next_photo/src/features/albums/presentation/cubits/photos/photos_cubit.dart';
 import 'package:next_photo/src/features/home/presentation/widgets/photo_list_item.dart';
+import 'package:next_photo/src/features/home/presentation/widgets/user_stories_list_item.dart';
+import 'package:next_photo/src/features/users/presentation/cubits/users/users_cubit.dart';
 
 /// The screen with photo feed and stories.
 class HomeScreen extends StatelessWidget {
@@ -19,18 +21,14 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Material(
-          child: Column(
-            children: const [
-              _TopNavigationBar(),
-              Expanded(
-                child: _ContentScrollView(),
-              ),
-            ],
+    return AppScreen(
+      body: Column(
+        children: const [
+          _TopNavigationBar(),
+          Expanded(
+            child: _ContentScrollView(),
           ),
-        ),
+        ],
       ),
     );
   }
@@ -42,7 +40,6 @@ class _TopNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.background(context),
       padding: const EdgeInsets.symmetric(
         horizontal: AppDimens.contentPaddingHorizontal,
         vertical: AppDimens.contentPaddingVertical,
@@ -86,7 +83,7 @@ class _ContentScrollView extends StatelessWidget {
             child: const CustomScrollView(
               slivers: [
                 SliverToBoxAdapter(
-                  child: _StoriesList(),
+                  child: _UserStoriesList(),
                 ),
                 SliverToBoxAdapter(
                   child: VerticalDivider(),
@@ -102,36 +99,37 @@ class _ContentScrollView extends StatelessWidget {
 }
 
 // TODO: Implement stories mock.
-class _StoriesList extends StatelessWidget {
-  const _StoriesList({Key? key}) : super(key: key);
+class _UserStoriesList extends StatelessWidget {
+  const _UserStoriesList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 114,
-      child: ListView.separated(
-        itemCount: 10,
-        padding: const EdgeInsets.symmetric(
-          horizontal: AppDimens.borderPaddingHorizontal,
-          vertical: AppDimens.contentPaddingVertical,
-        ),
-        scrollDirection: Axis.horizontal,
-        separatorBuilder: (context, _) => const SizedBox(width: 20),
-        itemBuilder: (context, index) => const _StoriesListItem(),
+    return InjectedBlocProvider<UsersCubit>(
+      onCreate: (cubit) => cubit.getAllUsers(),
+      child: BlocBuilder<UsersCubit, UsersState>(
+        builder: (context, state) {
+          return state.maybeWhen(
+            success: (users) {
+              return SizedBox(
+                height: 114,
+                child: ListView.separated(
+                  itemCount: users.length,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: AppDimens.borderPaddingHorizontal,
+                    vertical: AppDimens.contentPaddingVertical,
+                  ),
+                  scrollDirection: Axis.horizontal,
+                  separatorBuilder: (context, _) => const SizedBox(width: 20),
+                  itemBuilder: (context, index) => UserStoriesListItem(
+                    user: users.elementAt(index),
+                  ),
+                ),
+              );
+            },
+            orElse: () => const SizedBox.shrink(),
+          );
+        },
       ),
-    );
-  }
-}
-
-class _StoriesListItem extends StatelessWidget {
-  const _StoriesListItem({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: Implement stories list item.
-    return const Placeholder(
-      fallbackHeight: 94,
-      fallbackWidth: 72,
     );
   }
 }

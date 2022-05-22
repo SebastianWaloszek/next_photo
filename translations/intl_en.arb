@@ -5,7 +5,7 @@
   "reels": "Reels",
   "store":"Store",
   "profile": "Profile",
-  "likedBy": "Liked by {userName} and {othersCount} others",
+  "likes": "{count, plural, one{1 like} other{{count} likes}}",
   "viewAllComments": "View all {count} comments",
   "addAComment": "Add a comment...",
   "anErrorOccurred": "An error occurred please again later."

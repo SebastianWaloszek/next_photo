@@ -33,7 +33,6 @@ const _photo = Photo(
   id: PhotoId(1),
   albumId: AlbumId(1),
   title: 'title',
-  url: 'url',
-  thumbnailUrl: 'thumbnailUrl',
+  url: 'https://picsum.photos/id/1/1024/1024',
   isLiked: false,
 );

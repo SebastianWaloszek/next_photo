@@ -10,7 +10,7 @@ import 'package:injectable/injectable.dart' as _i2;
 import 'package:logger/logger.dart' as _i5;
 import 'package:shared_preferences/shared_preferences.dart' as _i6;
 
-import '../common/presentation/cubit/bottom_navigation_cubit.dart' as _i3;
+import '../common/presentation/cubits/bottom_navigation_cubit.dart' as _i3;
 import '../features/albums/data/repositories/album_repository_impl.dart'
     as _i14;
 import '../features/albums/data/repositories/photo_repository_impl.dart'

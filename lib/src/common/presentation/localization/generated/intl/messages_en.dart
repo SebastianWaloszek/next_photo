@@ -20,8 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(userName, othersCount) =>
-      "Liked by ${userName} and ${othersCount} others";
+  static String m0(count) =>
+      "${Intl.plural(count, one: '1 like', other: '${count} likes')}";
 
   static String m1(count) => "View all ${count} comments";
 
@@ -33,7 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "featureNotImplemented": MessageLookupByLibrary.simpleMessage(
             "This feature was not implemented yet"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
-        "likedBy": m0,
+        "likes": m0,
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "reels": MessageLookupByLibrary.simpleMessage("Reels"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
