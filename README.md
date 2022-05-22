@@ -68,7 +68,7 @@ flutter run --release --flavor prod lib/src/main_prod.dart
 ```
 - Web
 ```
-flutter build web --web-renderer html -t lib/src/main_dev.dart
+flutter run -d chrome --web-renderer html -t lib/src/main_dev.dart
 ```
 
 ## Tests
