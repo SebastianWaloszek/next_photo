@@ -21,11 +21,11 @@ A Flutter Instagram look-alike photo blog application. Uses [jsonplaceholder](ht
 
 ## Coding task
 Create the following Flutter app:
-1. Create Infinite scroll list with images (use https://jsonplaceholder.typicode.com photos as API source) ✅
-2. Each image in the list has a title, an image preview and a like button. ✅
-3. By tapping on a preview image user is shown a full-sized image in a popup. ❌
-4. User can like and unlike images by tapping Like button. ✅
-5. Like state persist between app launches. ✅
+1. Create Infinite scroll list with images (use https://jsonplaceholder.typicode.com photos as API source)
+2. Each image in the list has a title, an image preview and a like button.
+3. By tapping on a preview image user is shown a full-sized image in a popup.
+4. User can like and unlike images by tapping Like button.
+5. Like state persist between app launches.
 
 ## Figma design
 The figma design file that was prepared by me for this app can be found [here](https://www.figma.com/file/kWh5yBJmKgaLXaM7avh39H/next_photo?node-id=5%3A600).
