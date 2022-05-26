@@ -8,16 +8,18 @@ A Flutter Instagram look-alike photo blog application. Uses [jsonplaceholder](ht
 
 ## Table of contents <!-- omit in toc -->
 - [Coding task](#coding-task)
+- [Implemented functionality](#implemented-functionality)
 - [Figma design](#figma-design)
-- [Flutter version](#flutter-version)
 - [Web demo](#web-demo)
 - [Project structure](#project-structure)
-- [Feature structure](#feature-structure)
+- [Module structure](#module-structure)
+- [Flutter version](#flutter-version)
 - [Running the app](#running-the-app)
 - [Tests](#tests)
 - [Index files](#index-files)
 - [Documentation](#documentation)
 - [Code coverage](#code-coverage)
+- [App icon](#app-icon)
 
 ## Coding task
 Create the following Flutter app:
@@ -27,18 +29,22 @@ Create the following Flutter app:
 4. User can like and unlike images by tapping Like button.
 5. Like state persist between app launches.
 
+## Implemented functionality
+These is the list of all app features available to the user as of now:
+
+- Fetching photos. 
+  - [Jsonplaceholder](https://jsonplaceholder.typicode.com) was used as data source in combination with [picsum](https://picsum.photos/) to show more interesting images.
+- Liking and unliking photos. 
+  - Each like state for a photo is persisted between app launches.
+- Full photo view.
+  - After clicking on a photo a separate image view is opened with zoom functionality.
+- Photo list refresh.
+  - The photo data is refreshed each time the list is dragged from the top.   
+
+Other functionality is either mocked, placeholders or unused for now.
+
 ## Figma design
 The figma design file that was prepared by me for this app can be found [here](https://www.figma.com/file/kWh5yBJmKgaLXaM7avh39H/next_photo?node-id=5%3A600).
-
-## Flutter version
-
-This app was developed and tested on the following flutter channel and version:
-```javascript
-Flutter 3.0.0 • channel stable • https://github.com/flutter/flutter.git
-Framework • revision ee4e09cce0 (7 days ago) • 2022-05-09 16:45:18 -0700
-Engine • revision d1b9a6938a
-Tools • Dart 2.17.0 • DevTools 2.12.2
-```
 
 ## Web demo
 The live web demo version of the app can be found [here](https://sebastianwaloszek.github.io/nextphoto.web/#/).
@@ -53,8 +59,25 @@ The project's main [src](lib/src/) module contains 4 submodules:
   features.
 - [features](lib/src/features) - contains modules for all the app's main features.
 
-## Feature structure
-// TODO
+## Module structure
+
+Each module follows strict layer segregation. Three main layers are defined:
+
+- **data** - manages the application logic related to communicating with the network, retrieving & sending data, managing local storage etc.
+
+- **domain** - is dedicated to business level logic.
+
+- **presentation** - is responsible for presenting data to screen and handling user interactions.
+
+## Flutter version
+
+This app was developed and tested on the following flutter channel and version:
+```javascript
+Flutter 3.0.0 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision ee4e09cce0 (7 days ago) • 2022-05-09 16:45:18 -0700
+Engine • revision d1b9a6938a
+Tools • Dart 2.17.0 • DevTools 2.12.2
+```
 
 ## Running the app
 If you want to run the app using the terminal:
