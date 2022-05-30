@@ -51,7 +51,7 @@ The live web demo version of the app can be found [here](https://sebastianwalosz
 
 ## Project structure
 
-The project's main [src](lib/src/) module contains 4 submodules:
+The project's main [src](lib/src) module contains 4 submodules:
 
 - [app](lib/src/app) - contains code responsible for configuring and running the application.
 - [base](lib/src/base) - contains components that can serve as a basis for any flutter project.
@@ -92,6 +92,10 @@ flutter run --release --flavor prod lib/src/main_prod.dart
 - Web
 ```
 flutter run -d chrome --web-renderer html -t lib/src/main_dev.dart
+```
+- Windows
+```
+flutter run -d windows -t lib/src/main_dev.dart
 ```
 
 ## Tests
