@@ -97,6 +97,10 @@ flutter run -d chrome --web-renderer html -t lib/src/main_dev.dart
 ```
 flutter run -d windows -t lib/src/main_dev.dart
 ```
+- Linux
+```
+flutter run -d linux -t lib/src/main_dev.dart
+```
 
 ## Tests
 Run unit tests by typing:

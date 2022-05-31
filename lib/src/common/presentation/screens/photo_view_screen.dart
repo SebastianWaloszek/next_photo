@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:next_photo/src/common/presentation/theme/app_colors.dart';
 import 'package:next_photo/src/common/presentation/theme/color/theme_color.dart';
 import 'package:next_photo/src/common/presentation/widgets/app_screen.dart';
 import 'package:photo_view/photo_view.dart';
@@ -36,7 +35,7 @@ class PhotoViewScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        foregroundColor: AppColors.primaryContent(context),
+        foregroundColor: DarkThemeColor.primaryContent,
       ),
       body: SafeArea(
         child: PhotoView(
