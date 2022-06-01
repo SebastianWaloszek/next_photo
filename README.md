@@ -1,7 +1,7 @@
-[![Build][github_action_badge]][github_action]
-[![Codecov][codecov_badge]][codecov]
+![Build](https://github.com/SebastianWaloszek/next_photo/actions/workflows/build.yml/badge.svg)
+[![codecov](https://codecov.io/gh/SebastianWaloszek/next_photo/branch/master/graph/badge.svg?token=FX7V3V8AA4)](https://codecov.io/gh/SebastianWaloszek/next_photo)
 
-# next_photo <!-- omit in toc -->
+# NextPhoto <!-- omit in toc -->
 
 A Flutter Instagram look-alike photo blog application. Uses [jsonplaceholder](https://jsonplaceholder.typicode.com/) for mock data. Please refer to [coding task](#coding-task) for info about desired features.
 
