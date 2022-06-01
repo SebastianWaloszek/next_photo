@@ -1,3 +1,6 @@
+[![Build][github_action_badge]][github_action]
+[![Codecov][codecov_badge]][codecov]
+
 # next_photo <!-- omit in toc -->
 
 A Flutter Instagram look-alike photo blog application. Uses [jsonplaceholder](https://jsonplaceholder.typicode.com/) for mock data. Please refer to [coding task](#coding-task) for info about desired features.
