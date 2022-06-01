@@ -1,3 +1,4 @@
+import 'package:bloc_test/bloc_test.dart';
 import 'package:logger/logger.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:next_photo/src/common/data/http/app_http_client.dart';
@@ -13,6 +14,7 @@ import 'package:next_photo/src/features/albums/domain/use_cases/get_all_photos.d
 import 'package:next_photo/src/features/albums/domain/use_cases/get_photo.dart';
 import 'package:next_photo/src/features/albums/domain/use_cases/get_user_albums.dart';
 import 'package:next_photo/src/features/albums/domain/use_cases/set_photo_like.dart';
+import 'package:next_photo/src/features/albums/presentation/cubits/photo_like/photo_like_cubit.dart';
 import 'package:next_photo/src/features/users/data/sources/user_data_source.dart';
 import 'package:next_photo/src/features/users/domain/repositories/user_repository.dart';
 import 'package:next_photo/src/features/users/domain/use_cases/get_all_users.dart';
@@ -56,3 +58,6 @@ class GetAllPhotosMock extends Mock implements GetAllPhotos {}
 class GetPhotoMock extends Mock implements GetPhoto {}
 
 class SetPhotoLikeMock extends Mock implements SetPhotoLike {}
+
+class PhotoLikeCubitMock extends MockCubit<PhotoLikeState>
+    implements PhotoLikeCubit {}

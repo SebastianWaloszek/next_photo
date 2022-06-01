@@ -46,6 +46,7 @@ dev_dependencies:
   json_serializable: ^6.2.0
   lint: ^1.8.2
   mocktail: 0.3.0
+  mocktail_image_network: ^0.3.1
   retrofit_generator: ^4.0.1
 
 dependency_overrides:
@@ -56,7 +57,6 @@ flutter:
 
   assets:
     - assets/fonts/
-    - assets/images/
 
   fonts:
     - family: AppIcons
