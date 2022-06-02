@@ -96,14 +96,9 @@ flutter run --release --flavor prod lib/src/main_prod.dart
 ```
 flutter run -d chrome --web-renderer html -t lib/src/main_dev.dart
 ```
-- Windows
+- MacOS, Windows, Linux
 ```
-flutter run -d windows -t lib/src/main_dev.dart
-```
-- Linux
-```
-flutter run -d linux -t lib/src/main_dev.dart
-```
+flutter run -d macos|windows|linux -t lib/src/main_dev.dart
 
 ## Tests
 Run unit tests by typing:
